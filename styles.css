@@ -231,7 +231,7 @@
     bottom: 0;                           /* sits under the text */
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;                         /* make line longer than text */
+    width: 100%;                         /* make line longer than text */
     height: 2px;                         /* thickness */
     background-color: #f4f0ec;           /* same color as text */
     pointer-events: none;
