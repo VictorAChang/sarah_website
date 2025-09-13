@@ -96,11 +96,38 @@
   top: 50%;
   transform: translate(-50%, -60%);
 }
+/* Position and style for "Author" */
 .author-header-text {
-  font-size: clamp(2.5rem, 8vw, 6rem);
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  top: 45%;           /* moves it midway down the overlay */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: bold;
+  color: #000;        /* black */
+  text-decoration: underline;
+  z-index: 2;         /* above Sarah Chang */
+  text-align: center;
+  white-space: nowrap;
+  text-underline-offset: 1.0rem;
 }
+
+
+.yogi-header-text {
+  position: absolute;
+  top: 45%;           /* moves it midway down the overlay */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: bold;
+  color: #000;        /* black */
+  text-decoration: underline;
+  z-index: 2;         /* above Sarah Chang */
+  text-align: center;
+  white-space: nowrap;
+  text-underline-offset: 1.0rem;
+}
+
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 1.2rem;
