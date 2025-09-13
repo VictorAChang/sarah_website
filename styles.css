@@ -121,12 +121,34 @@ header h1 {
   margin: 0;
 }
 
+
 .link-section {
   flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 0.5rem 1rem;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  .link-section {
+    flex-direction: column !important;
+    align-items: stretch;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+  .custom-link {
+    font-size: 1.3rem !important;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .link-section a {
