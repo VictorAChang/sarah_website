@@ -1,0 +1,159 @@
+/* White background for author.html and yoga.html */
+.bg-white-page {
+  background-color: #fff !important;
+  background-image: none !important;
+}
+/* Footer background for index.html only */
+.footer-landing {
+  background-color: #e9b3a3 !important;
+  text-align: center;
+  color: #333;
+  padding: 1rem;
+}
+/* Navbar and dropdown custom styles for author.html */
+.navbar-brand {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.dropdown-menu-end {
+  right: 0;
+  left: auto;
+}
+.custom-link,
+.custom-link.btn,
+.custom-link.btn-primary,
+.custom-link.btn-success {
+    position: relative;                  /* needed for the ::after to anchor */
+    color: #f4f0ec !important;
+    background: none;
+    box-shadow: none;
+    font-size: 4.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    text-decoration: none;               /* turn off native underline */
+}
+
+/* Fake underline */
+.custom-link::after,
+.custom-link.btn::after,
+.custom-link.btn-primary::after,
+.custom-link.btn-success::after {
+    content: "";
+    position: absolute;
+    bottom: 0;                           /* sits under the text */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;                         /* make line longer than text */
+    height: 2px;                         /* thickness */
+    background-color: #f4f0ec;           /* same color as text */
+    pointer-events: none;
+}
+
+.custom-link:hover,
+.custom-link:focus {
+    color: #1a1a1a !important;
+    transition: color 0.2s;
+}
+
+.custom-link:hover::after,
+.custom-link:focus::after {
+    background-color: #fff;
+    height: 2.2em; /* visually creates a highlight "background" under the text */
+    z-index: -1;
+    border-radius: 0.0em;
+    top: 50%;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    transition: background-color 0.2s;
+    opacity: 0.9; /* more visible white highlight */
+}
+
+/* Background images for index.html only */
+.landing-bg::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: flex;
+    pointer-events: none;
+    background: 
+        linear-gradient(rgba(20,20,20,0.45), rgba(20,20,20,0.45)),
+        url('assets/author_landing.png') left center/50% 100% no-repeat,
+        url('assets/yogi_landing.png') right center/50% 100% no-repeat;
+    background-color: #fff;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 100% 100%, 50% 100%, 50% 100%;
+    background-position: center center, left center, right center;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  color: #f4f0ec;
+  font-family: sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 3rem 1rem 1rem;
+}
+
+header h1 {
+  font-size: 14vw;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.link-section {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.link-section a {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer.footer-landing {
+  background-color: #e9b3a3 !important;
+  color: #333 !important;
+}
+/* styles.css: Custom styles for Sarah's website */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
+
+body {
+    font-family: 'Playfair Display', serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
