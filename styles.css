@@ -1,3 +1,86 @@
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .footer-landing {
+    font-size: 0.95rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .container, .container.my-5 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  h1, h2, h3 {
+    font-size: 2rem !important;
+    margin-top: 1.2rem !important;
+  }
+  .row.align-items-center {
+    flex-direction: column !important;
+  }
+  .col-md-7, .col-md-5 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    max-width: 100% !important;
+  }
+  .position-absolute.top-50.start-50.translate-middle.fw-bold {
+    font-size: 2.5rem !important;
+    margin-top: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .position-relative.d-flex.flex-column.align-items-center[style] {
+    margin-left: 0 !important;
+  }
+  .d-flex.flex-wrap.justify-content-center.align-items-center.my-4.gap-3 {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+  .d-flex.flex-wrap.justify-content-center.align-items-center.my-4.gap-3 img {
+    width: 90vw !important;
+    height: auto !important;
+    max-width: 320px !important;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  .footer-landing {
+    font-size: 0.95rem;
+    padding: 1.2rem 0.5rem;
+  }
+  .container, .container.my-5 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  h1, h2, h3 {
+    font-size: 2rem !important;
+    margin-top: 1.2rem !important;
+  }
+  .row.align-items-center {
+    flex-direction: column !important;
+  }
+  .col-md-7, .col-md-5 {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    max-width: 100% !important;
+  }
+  .position-absolute.top-50.start-50.translate-middle.fw-bold {
+    font-size: 2.5rem !important;
+    margin-top: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .position-relative.d-flex.flex-column.align-items-center[style] {
+    margin-left: 0 !important;
+  }
+}
 /* White background for author.html and yoga.html */
 .bg-white-page {
   background-color: #fff !important;
