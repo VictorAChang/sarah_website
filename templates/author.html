@@ -19,7 +19,7 @@
         <!-- social buttons aligned to the right and vertically centered -->
         <div
           class="position-absolute d-flex"
-          style="right:1rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
+          style="right:0rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
         >
           <a
             href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
@@ -40,9 +40,22 @@
         </div>
       </div>
     </section>
-    <section class="container-fluid p-0" style="height:400px; background-image:url('../assets/author/author_bg.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <img src="../assets/author/author_illustrator.png" alt="Author illustrator" style="height:760px; max-height:760px; object-fit:contain;">
+    <section class="container-fluid p-0" style="background-image:url('../assets/author/author_bg.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+      <style>
+        @media (min-width: 992px) {
+          .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
+          .author-illustrator-wrap { max-height: none !important; }
+        }
+      </style>
+      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
+        <img
+          class="author-illustrator-img"
+          src="../assets/author/author_illustrator.png"
+          alt="Author illustrator"
+          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
+        />
+      </div>
+        />
       </div>
     </section>
     <section class="container my-5">
@@ -50,7 +63,7 @@
         class="position-relative d-flex flex-column align-items-center"
         style="z-index: 2"
       >
-      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 4rem; font-weight: normal;">CHILDREN'S BOOKS</h1>
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 3rem; font-weight: normal;">CHILDREN'S BOOKS</h1>
       <div class="row align-items-center justify-content-between">
         <div class="col-md-8 pe-md-6" style="margin: 0;">
           <div class="p-3 pe-0">
@@ -73,13 +86,13 @@
         </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-end align-items-center text-center" style="padding-left:0rem;">
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center" style="padding-left:0rem;">
           <a href="https://www.amazon.com/Henry-Goes-Abuelo-Sarah-Chang/dp/1942923686" target="_blank">
-        <img src="../assets/author/henry_bookcover.jpg" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid rounded shadow" style="max-width: 300px; margin-top: 1rem; margin-left: 0rem;" />
+            <img src="../assets/author/henry_bookcover.jpg" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid rounded shadow mx-auto" style="max-width: 300px; margin-top: 1rem;" />
           </a>
         </div>
       </div>
-      <h1 style="color: #000; margin-top: 3rem; margin-bottom: 0rem; text-align: center; font-size: 4rem; font-weight: normal;">FICTION</h1>
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: 0rem; text-align: center; font-size: 3rem; font-weight: normal;">FICTION</h1>
       <div class="row">
         <div class="col-12 pe-md-6" style="margin: 0;">
           <div class="p-3 pe-0">
@@ -92,7 +105,7 @@
           </div>
         </div>
       </div>
-      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 4rem; font-weight: normal;">CURRICULUM</h1>
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 3rem; font-weight: normal;">CURRICULUM</h1>
       <div class="row align-items-center justify-content-between">
         <div class="col-md-8 pe-md-6" style="margin: 0;">
           <div class="p-3 pe-0">
@@ -109,9 +122,9 @@
         </p>
           </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-end align-items-center text-center" style="padding-left:0rem;">
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center" style="padding-left:0rem;">
           <a href="https://drive.google.com/drive/folders/1O6yxRpKKjkWuU91m96ZXnctqTHmDJjZv" target="_blank">
-        <img src="../assets/author/dropbox.png" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid rounded shadow" style="max-width: 150px; margin-top: 1rem; margin-left: 0rem;" />
+            <img src="../assets/author/dropbox.png" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid rounded shadow mx-auto mt-3 mt-md-1" style="max-width:150px;" />
           </a>
         </div>
       </div>
