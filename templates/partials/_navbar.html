@@ -1,26 +1,20 @@
-<nav class="navbar py-3" style="background-color: #e9b3a3">
+<nav class="navbar py-4" style="background-color: #fafafa; min-height: 72px">
   <div class="container-fluid">
-    <!-- Brand -->
-    <a class="navbar-brand text-white" href="/index.html">Sarah Chang</a>
     <!-- Right section -->
     <div class="d-flex align-items-center ms-auto">
-      <!-- Social buttons -->
-      <a
-        href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
-        target="_blank"
-        class="btn btn-outline-light btn-sm me-2 social-btn"
-      >
-        <i class="bi bi-linkedin"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/bethechang_yoga/"
-        target="_blank"
-        class="btn btn-outline-light btn-sm me-3 social-btn"
-      >
-        <i class="bi bi-instagram"></i>
-      </a>
-      <!-- Hamburger dropdown -->
-      <div class="dropdown">
+      <!-- Links visible on medium+ screens -->
+      <div class="d-none d-md-flex align-items-center">
+        <a class="nav-link px-2 text-dark" href="/templates/author.html"
+          >AUTHOR</a
+        >
+        <span class="text-muted px-1">|</span>
+        <a class="nav-link px-2 text-dark" href="/templates/yoga.html">YOGI</a>
+        <span class="text-muted px-1">|</span>
+        <a class="nav-link px-2 text-dark" href="/index.html">ABOUT</a>
+      </div>
+
+      <!-- Hamburger dropdown (only on small screens) -->
+      <div class="dropdown d-md-none ms-2">
         <button
           class="btn btn-outline-light dropdown-toggle"
           type="button"
@@ -33,12 +27,13 @@
         <ul
           class="dropdown-menu dropdown-menu-end"
           aria-labelledby="navDropdown"
+          style="right: -0.5rem"
         >
-          <li><a class="dropdown-item" href="/index.html">Landing</a></li>
           <li>
             <a class="dropdown-item" href="/templates/author.html">Author</a>
           </li>
-          <li><a class="dropdown-item" href="/templates/yoga.html">Yoga</a></li>
+          <li><a class="dropdown-item" href="/templates/yoga.html">Yogi</a></li>
+          <li><a class="dropdown-item" href="/index.html">About</a></li>
         </ul>
       </div>
     </div>
