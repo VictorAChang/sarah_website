@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sarah's About Page</title>
+    <div data-include="/templates/partials/base_site.html"></div>
+  </head>
+  <body class="bg-white-page">
+    <div data-include="/templates/partials/_navbar.html"></div>
+    <main class="site-content">
+    <section class="container my-5 position-relative" style="min-height: 5px;">
+      <div class="w-100 position-relative">
+        <!-- centered logo -->
+        <a href="/index.html" aria-label="Home" class="d-inline-block">
+            <img
+                src="../assets/logo.png"
+                alt="Author Yogi logo"
+                class="img-fluid position-absolute"
+                style="max-width:180px; left:50%; top:50%; transform:translate(-50%,-50%);"
+            />
+        </a>
+        <!-- social buttons aligned to the right and vertically centered -->
+        <div
+          class="position-absolute d-flex"
+          style="right:0rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
+        >
+          <a
+            href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm social-btn"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/bethechang_/"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm social-btn"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid p-0" style="background-image:url('../assets/author/author_bg.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+      <style>
+        @media (min-width: 992px) {
+          .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
+          .author-illustrator-wrap { max-height: none !important; }
+        }
+      </style>
+      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
+        <img
+          class="author-illustrator-img"
+          src="../assets/about/about_header.png"
+          alt="Author illustrator"
+          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
+        />
+      </div>
+    </section>
+    </section>
+    <section class="container my-3">
+    <div
+    class="position-relative d-flex flex-column align-items-center"
+    style="z-index: 2"
+    >
+        <h1 style="color: #000; margin-top: 1.5rem; margin-bottom: 1rem; font-size: 1.25rem; font-weight: 700; width: 100%; text-align: left; margin-left: 1rem; align-self: flex-start;">
+            About Me
+        </h1>
+        <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-md-8 pe-md-6 mx-auto text-center text-md-start" style="margin: 0;">
+            <div class="p-3 pe-0">
+                <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+                    Hi, I'm Sarah: a writer, illustrator, yoga instructor, and former English teacher who still loves a good annotated text and a perfectly sharpened pencil.
+                </p>
+                <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+                    I spent 10 years teaching middle and high school ELA in Michigan and North Carolina. While I loved the relationships and creativity that came with the job, I eventually felt it was time to take a leap and explore other passions. These days, I focus on writing Bible-based curriculum for pre-teens and teens, helping young people engage with Scripture in ways that are relatable, reflective, and real. I also continue to support English teachers by creating thoughtful, engaging lessons they can bring straight into the classroom.
+                </p>
+            </div>
+            </div>
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center p-0" style="padding:0; height:100%;">
+            <a href="https://www.amazon.com/Henry-Goes-Abuelo-Sarah-Chang/dp/1942923686" target="_blank" style="display:block; width:100%; height:100%;">
+                <img src="../assets/about/sanfran1.png" alt="Sarah in San Francisco" class="w-100 h-100" style="display:block; width:100%; height:100%; object-fit:cover; border-radius:0; box-shadow:none;" />
+            </a>
+            </div>
+        </div>
+        <!-- Full-width row; text aligned to match the paragraph above -->
+        <div class="row mt-3">
+            <div class="col-12">
+                <div class="p-3 p-md-0">
+                    <div class="ms-md-3" style="width: calc(100% - 1rem);">
+                        <p class="text-center text-md-start px-2 px-md-0" style="z-index: 2; color: #000; margin: 0;">
+                            I've worked with Our Written Lives LLC as an editorial assistant, helping bring a variety of book projects to life from story development to layout and cover design. It's been such a joy to collaborate with other creatives and see their work come together.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-100 mt-4">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center p-0" style="padding:0; height:100%;">
+                <a href="https://www.amazon.com/Henry-Goes-Abuelo-Sarah-Chang/dp/1942923686" target="_blank" style="display:block; width:100%; height:100%;">
+                    <img src="../assets/about/dogs.png" alt="Pam & Benny" class="w-100 h-100" style="display:block; width:100%; height:100%; object-fit:cover; border-radius:0; box-shadow:none;" />
+                </a>
+            </div>
+            <div class="col-12 col-md-8">
+                <div class="p-3 pe-0">
+                    <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+                        When I'm not working, you'll probably find me in the kitchen trying out a new recipe, practicing yoga, curled up with a good book, or planning my next trip with my husband, Victor. We share life with two dogs—Benny, our beagle mix with a big personality, and Pamela, our sweet goldendoodle.
+                    </p>
+                    <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+                        My Christian faith is at the heart of everything I do, and I'm passionate about using my gifts to encourage and equip others, whether that's through teaching, writing, or simply showing up with a listening ear.
+                    </p>
+                    <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+                        Thanks for stopping by! I'm really glad you're here.
+                    </p>
+
+                    <div class="text-center text-md-start mt-1" style="margin-top:0.25rem;">
+                        <div style="width:100%; max-width:260px; margin:0 auto; overflow:hidden; height:clamp(80px,12vh,120px);">
+                            <img
+                                src="../assets/about/signature.png"
+                                alt="Sarah with her husband and dogs"
+                                class="img-fluid"
+                                style="width:100%; height:100%; object-fit:cover; display:block;"
+                            />
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container p-0">
+        <div class="d-flex flex-column justify-content-center align-items-center" style="min-height:12vh; padding:0.25rem 0;">
+            <figure style="margin:0; text-align:center; width:100%; display:flex; flex-direction:column; align-items:center;">
+                <img
+                    src="../assets/about/credentials.png"
+                    alt="Author illustrator"
+                    class="img-fluid"
+                    style="max-width:240px; width:40%; height:auto; object-fit:contain; display:block; margin:0 auto;"
+                />
+                <figcaption style="margin-top:-3rem; color:#000; max-width:760px; margin-left:auto; margin-right:auto;"></figcaption>
+                    <p style="margin:0 0 0rem; font-size:0.975rem;">B.S. Secondary English Education</p>
+                    <p style="margin:0 0 0rem; font-size:0.975rem;">M.Ed. Education: Curriculum & Instruction</p>
+                    <p style="margin:0; font-size:0.975rem;">RYT-200, Yoga Alliance</p>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <section class="container-fluid p-0 my-5">
+        <div class="row g-0">
+            <div class="col-6 col-md-3">
+                <img
+                    src="../assets/about/hiking.png"
+                    alt="Sarah hiking"
+                    class="w-100 d-block"
+                    style="height:clamp(100px,18vh,300px); object-fit:cover;"
+                />
+            </div>
+            <div class="col-6 col-md-3">
+                <img
+                    src="../assets/about/streets.png"
+                    alt="Sarah walking on streets"
+                    class="w-100 d-block"
+                    style="height:clamp(100px,18vh,300px); object-fit:cover;"
+                />
+            </div>
+            <div class="col-6 col-md-3">
+                <img
+                    src="../assets/about/sanfran2.png"
+                    alt="Sarah in San Francisco"
+                    class="w-100 d-block"
+                    style="height:clamp(100px,18vh,300px); object-fit:cover;"
+                />
+            </div>
+            <div class="col-6 col-md-3">
+                <img
+                    src="../assets/about/panama.png"
+                    alt="Sarah in Panama"
+                    class="w-100 d-block"
+                    style="height:clamp(100px,18vh,300px); object-fit:cover;"
+                />
+            </div>
+        </div>
+    </section>
+    </main>
+    <div data-include="/templates/partials/_footer.html"></div>
+  <script src="/include.js"></script>
+  <!-- No Bootstrap JS; include dropdown helper in include.js if needed -->
+  </body>
+</html>
