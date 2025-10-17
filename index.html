@@ -15,9 +15,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body class="landing-bg">
+    <!-- navbar include -->
+    <div data-include="templates/partials/_navbar.html"></div>
+
     <header>
       <h1>Sarah Chang</h1>
     </header>
@@ -35,7 +38,7 @@
         "
       >
         <a
-          href="author.html"
+          href="templates/author.html"
           class="btn btn-primary custom-link author-btn-desktop"
           >Author</a
         >
@@ -50,37 +53,16 @@
           padding-left: 32px;
         "
       >
-        <a href="yoga.html" class="btn btn-success custom-link yoga-btn-desktop"
+        <a
+          href="templates/yoga.html"
+          class="btn btn-success custom-link yoga-btn-desktop"
           >Yoga</a
         >
       </div>
     </section>
-    <footer
-      class="footer-landing text-center py-4"
-      style="background-color: #e9b3a3"
-    >
-      <div class="d-flex justify-content-center align-items-center">
-        <p class="mb-0 text-white me-3">
-          &copy; 2025 Sarah. All rights reserved.
-        </p>
-        <a
-          href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
-          target="_blank"
-          class="btn btn-outline-light btn-sm me-2 social-btn"
-          aria-label="LinkedIn"
-        >
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a
-          href="https://www.instagram.com/bethechang_yoga/"
-          target="_blank"
-          class="btn btn-outline-light btn-sm social-btn"
-          aria-label="Instagram"
-        >
-          <i class="bi bi-instagram"></i>
-        </a>
-      </div>
-    </footer>
+    <!-- footer include -->
+    <div data-include="/templates/partials/_footer.html"></div>
+    <script src="/include.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
