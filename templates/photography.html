@@ -71,57 +71,42 @@
             </div>
             <!-- Before/After Comparison Grid -->
             <div class="comparison-gallery">
-              <!-- Comparison Item 1 -->
-              <div class="comparison-item mb-5" id="comparison-1">
-                <div class="row align-items-center">
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="image-container position-relative">
-                      <img src="../assets/about/sanfran1.png" alt="San Francisco Before Editing" class="before-img img-fluid" style="width: 100%; height: auto; border-radius: 10px;">
-                      <div class="image-label before-label">Before</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="image-container position-relative">
-                      <img src="../assets/about/sanfran2.png" alt="San Francisco After Editing" class="after-img img-fluid blurred" style="width: 100%; height: auto; border-radius: 10px;">
-                      <div class="image-label after-label">After</div>
-                      <div class="transform-overlay">
-                        <button class="transform-btn" onclick="transformImage(1)">
-                          <i class="fas fa-magic"></i>
-                          <span>Transform</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              
+              <!-- Photography Section with Dynamic Header -->
+              <div class="section-header text-center mb-4 mt-4" id="dynamic-header">
+                <h3 id="section-title" style="color: #333; font-size: 1.8rem; font-weight: 400; margin-bottom: 0.5rem;">
+                  <i id="section-icon" class="fas fa-heart text-danger me-2"></i><span id="section-name">Wedding Photography</span>
+                </h3>
+                <p id="section-description" style="color: #666; font-size: 1rem;">Capturing your special day with timeless elegance</p>
               </div>
               
-              <!-- Comparison Item 2 -->
-              <div class="comparison-item mb-5" id="comparison-2">
+              <!-- Wedding Photography Carousel -->
+              <div class="comparison-item mb-5" id="wedding-carousel">
+                <!-- Carousel Controls -->
+                <div class="text-center mb-3">
+                  <button class="btn btn-outline-secondary btn-sm me-2" onclick="previousWeddingImage()">
+                    <i class="fas fa-chevron-left"></i> Previous
+                  </button>
+                  <span id="carousel-counter" style="color: #666; font-weight: 500;">1 of 5</span>
+                  <button class="btn btn-outline-secondary btn-sm ms-2" onclick="nextWeddingImage()">
+                    Next <i class="fas fa-chevron-right"></i>
+                  </button>
+                </div>
+                
+                <!-- Carousel Images -->
                 <div class="row align-items-center">
                   <div class="col-md-6 mb-3 mb-md-0">
                     <div class="image-container position-relative">
-                      <div class="image-placeholder before-image">
-                        <div class="placeholder-content">
-                          <i class="fas fa-image fa-3x text-muted mb-3"></i>
-                          <h4 style="color: #666; font-weight: 300;">Before</h4>
-                          <p style="color: #999; font-size: 0.9rem;">Natural lighting</p>
-                        </div>
-                      </div>
+                      <img id="wedding-before-img" src="../assets/about/sanfran1.png" alt="Wedding Before Editing" class="before-img img-fluid" style="width: 100%; height: auto; border-radius: 10px;">
                       <div class="image-label before-label">Before</div>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="image-container position-relative">
-                      <div class="image-placeholder after-image blurred">
-                        <div class="placeholder-content">
-                          <i class="fas fa-magic fa-3x text-primary mb-3"></i>
-                          <h4 style="color: #333; font-weight: 300;">After</h4>
-                          <p style="color: #666; font-size: 0.9rem;">Artistic enhancement</p>
-                        </div>
-                      </div>
+                      <img id="wedding-after-img" src="../assets/about/sanfran2.png" alt="Wedding After Editing" class="after-img img-fluid blurred" style="width: 100%; height: auto; border-radius: 10px;">
                       <div class="image-label after-label">After</div>
-                      <div class="transform-overlay">
-                        <button class="transform-btn" onclick="transformImage(2)">
+                      <div class="transform-overlay" id="wedding-transform-overlay">
+                        <button class="transform-btn" onclick="transformWeddingImage()">
                           <i class="fas fa-magic"></i>
                           <span>Transform</span>
                         </button>
@@ -130,42 +115,7 @@
                   </div>
                 </div>
               </div>
-              
-              <!-- Comparison Item 3 -->
-              <div class="comparison-item" id="comparison-3">
-                <div class="row align-items-center">
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="image-container position-relative">
-                      <div class="image-placeholder before-image">
-                        <div class="placeholder-content">
-                          <i class="fas fa-image fa-3x text-muted mb-3"></i>
-                          <h4 style="color: #666; font-weight: 300;">Before</h4>
-                          <p style="color: #999; font-size: 0.9rem;">Unprocessed shot</p>
-                        </div>
-                      </div>
-                      <div class="image-label before-label">Before</div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="image-container position-relative">
-                      <div class="image-placeholder after-image blurred">
-                        <div class="placeholder-content">
-                          <i class="fas fa-magic fa-3x text-primary mb-3"></i>
-                          <h4 style="color: #333; font-weight: 300;">After</h4>
-                          <p style="color: #666; font-size: 0.9rem;">Professional finish</p>
-                        </div>
-                      </div>
-                      <div class="image-label after-label">After</div>
-                      <div class="transform-overlay">
-                        <button class="transform-btn" onclick="transformImage(3)">
-                          <i class="fas fa-magic"></i>
-                          <span>Transform</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
               
             </div>
           </div>
