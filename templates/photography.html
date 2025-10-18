@@ -47,7 +47,7 @@
       <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
         <img
           class="author-illustrator-img"
-          src="../assets/about/hiking.png"
+          src="../assets/author/author_illustrator.png"
           alt="Photography header"
           style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
         />
@@ -58,13 +58,53 @@
         class="position-relative d-flex flex-column align-items-center"
         style="z-index: 2; min-height: 60vh;"
       >
-        <h1 style="color: #000; margin-top: 3rem; margin-bottom: 2rem; text-align: center; font-size: 3rem; font-weight: normal;">PHOTOGRAPHY</h1>
+        <h1 class="photography-main-header" style="color: #000; margin-top: 3rem; margin-bottom: 2rem; text-align: center; font-size: 3rem; font-weight: normal;">PHOTOGRAPHY</h1>
+        
+        <style>
+          @media (max-width: 768px) {
+            .photography-main-header {
+              font-size: 2.2rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .photography-main-header {
+              font-size: 1.8rem !important;
+            }
+          }
+          
+          /* Before & After Editing header */
+          @media (max-width: 768px) {
+            .photography-sub-header {
+              font-size: 1.8rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .photography-sub-header {
+              font-size: 1.4rem !important;
+            }
+          }
+          
+          /* Dynamic section headers (Wedding, Graduation, etc.) */
+          @media (max-width: 768px) {
+            .photography-section-header {
+              font-size: 1.5rem !important;
+            }
+          }
+          
+          @media (max-width: 480px) {
+            .photography-section-header {
+              font-size: 1.2rem !important;
+            }
+          }
+        </style>
         
         <!-- Photography Editing Showcase -->
         <div class="row justify-content-center">
           <div class="col-12 col-lg-10">
             <div class="text-center mb-4">
-              <h2 style="color: #333; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">Before & After Editing</h2>
+              <h2 class="photography-sub-header" style="color: #333; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">Before & After Editing</h2>
               <p style="color: #666; font-size: 1.1rem; margin-bottom: 3rem;">
                 Discover the transformation through professional photo editing
               </p>
@@ -74,7 +114,7 @@
               
               <!-- Photography Section with Dynamic Header -->
               <div class="section-header text-center mb-4 mt-4" id="dynamic-header">
-                <h3 id="section-title" style="color: #333; font-size: 1.8rem; font-weight: 400; margin-bottom: 0.5rem;">
+                <h3 id="section-title" class="photography-section-header" style="color: #333; font-size: 1.8rem; font-weight: 400; margin-bottom: 0.5rem;">
                   <i id="section-icon" class="fas fa-heart text-danger me-2"></i><span id="section-name">Wedding Photography</span>
                 </h3>
                 <p id="section-description" style="color: #666; font-size: 1rem;">Capturing your special day with timeless elegance</p>
