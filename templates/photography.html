@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sarah's Photography Page</title>
+    <div data-include="/templates/partials/base_site.html"></div>
+  </head>
+  <body class="bg-white-page">
+    <div data-include="/templates/partials/_navbar.html"></div>
+    <main class="site-content">
+    <section class="container my-5 position-relative" style="min-height: 5px;">
+      <div class="w-100 position-relative">
+        <!-- centered logo -->
+        <a href="/index.html" aria-label="Home" class="d-inline-block">
+            <img
+                src="../assets/logo_authoryogi.png"
+                alt="Author Yogi logo"
+                class="img-fluid position-absolute"
+                style="max-width:180px; left:50%; top:50%; transform:translate(-50%,-50%);"
+            />
+        </a>
+        <!-- social buttons aligned to the right and vertically centered -->
+        <div
+          class="position-absolute d-flex"
+          style="right:0rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
+        >
+          <a
+            href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm social-btn"
+            aria-label="LinkedIn"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/bethechang_/"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm social-btn"
+            aria-label="Instagram"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid p-0" style="background-image:url('../assets/author/author_bg.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+      <style>
+        @media (min-width: 992px) {
+          .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
+          .author-illustrator-wrap { max-height: none !important; }
+        }
+      </style>
+      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
+        <img
+          class="author-illustrator-img"
+          src="../assets/about/hiking.png"
+          alt="Photography header"
+          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
+        />
+      </div>
+    </section>
+    <section class="container my-5">
+      <style>
+        .comparison-gallery {
+          margin-top: 2rem;
+        }
+        
+        .comparison-item {
+          border-radius: 15px;
+          overflow: hidden;
+          background: #fff;
+          box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .comparison-item:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 35px rgba(0,0,0,0.15);
+        }
+        
+        .image-container {
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px;
+        }
+        
+        .image-placeholder {
+          aspect-ratio: 4/3;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+        
+        .before-image {
+          background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+          border: 2px dashed #dee2e6;
+        }
+        
+        .after-image {
+          background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+          border: 2px solid #2196F3;
+          box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
+        }
+        
+        .placeholder-content {
+          text-align: center;
+          padding: 2rem;
+        }
+        
+        /* Interactive transformation effects */
+        .blurred {
+          filter: blur(8px);
+          transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .after-img.transformed {
+          filter: blur(0px);
+          transform: scale(1.02);
+          box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+        }
+        
+        .image-placeholder.transformed {
+          filter: blur(0px);
+          transform: scale(1.02);
+          box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+        }
+        
+        .transform-overlay {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          opacity: 1;
+          transition: opacity 0.5s ease;
+        }
+        
+        .transform-overlay.hidden {
+          opacity: 0;
+          pointer-events: none;
+        }
+        
+        .transform-btn {
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          border: none;
+          border-radius: 50px;
+          padding: 15px 25px;
+          color: white;
+          font-weight: 600;
+          font-size: 1rem;
+          cursor: pointer;
+          box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        
+        .transform-btn:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 12px 35px rgba(102, 126, 234, 0.6);
+          background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+        
+        .transform-btn i {
+          font-size: 1.2rem;
+        }
+        
+        .image-label {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          background: rgba(0,0,0,0.7);
+          color: white;
+          padding: 5px 12px;
+          border-radius: 20px;
+          font-size: 0.8rem;
+          font-weight: 600;
+          z-index: 5;
+        }
+        
+        .before-label {
+          background: rgba(108, 117, 125, 0.9);
+        }
+        
+        .after-label {
+          background: rgba(33, 150, 243, 0.9);
+        }
+        
+        .image-placeholder:hover {
+          transform: scale(1.01);
+        }
+        
+        .before-image:hover {
+          border-color: #adb5bd;
+          background: linear-gradient(135deg, #f1f3f4, #e0e0e0);
+        }
+        
+        .after-image:hover {
+          border-color: #1976D2;
+          box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+          .comparison-item {
+            margin-bottom: 2rem;
+          }
+          
+          .placeholder-content {
+            padding: 1.5rem;
+          }
+          
+          .placeholder-content h4 {
+            font-size: 1.2rem;
+          }
+          
+          .placeholder-content p {
+            font-size: 0.8rem;
+          }
+        }
+      </style>
+      <div
+        class="position-relative d-flex flex-column align-items-center"
+        style="z-index: 2; min-height: 60vh;"
+      >
+        <h1 style="color: #000; margin-top: 3rem; margin-bottom: 2rem; text-align: center; font-size: 3rem; font-weight: normal;">PHOTOGRAPHY</h1>
+        
+        <!-- Photography Editing Showcase -->
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-10">
+            <div class="text-center mb-4">
+              <h2 style="color: #333; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">Before & After Editing</h2>
+              <p style="color: #666; font-size: 1.1rem; margin-bottom: 3rem;">
+                Discover the transformation through professional photo editing
+              </p>
+            </div>
+            
+            <!-- Before/After Comparison Grid -->
+            <div class="comparison-gallery">
+              
+              <!-- Comparison Item 1 -->
+              <div class="comparison-item mb-5" id="comparison-1">
+                <div class="row align-items-center">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="image-container position-relative">
+                      <img src="../assets/about/sanfran1.png" alt="San Francisco Before Editing" class="before-img img-fluid" style="width: 100%; height: auto; border-radius: 10px;">
+                      <div class="image-label before-label">Before</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="image-container position-relative">
+                      <img src="../assets/about/sanfran2.png" alt="San Francisco After Editing" class="after-img img-fluid blurred" style="width: 100%; height: auto; border-radius: 10px;">
+                      <div class="image-label after-label">After</div>
+                      <div class="transform-overlay">
+                        <button class="transform-btn" onclick="transformImage(1)">
+                          <i class="fas fa-magic"></i>
+                          <span>Transform</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comparison Item 2 -->
+              <div class="comparison-item mb-5" id="comparison-2">
+                <div class="row align-items-center">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="image-container position-relative">
+                      <div class="image-placeholder before-image">
+                        <div class="placeholder-content">
+                          <i class="fas fa-image fa-3x text-muted mb-3"></i>
+                          <h4 style="color: #666; font-weight: 300;">Before</h4>
+                          <p style="color: #999; font-size: 0.9rem;">Natural lighting</p>
+                        </div>
+                      </div>
+                      <div class="image-label before-label">Before</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="image-container position-relative">
+                      <div class="image-placeholder after-image blurred">
+                        <div class="placeholder-content">
+                          <i class="fas fa-magic fa-3x text-primary mb-3"></i>
+                          <h4 style="color: #333; font-weight: 300;">After</h4>
+                          <p style="color: #666; font-size: 0.9rem;">Artistic enhancement</p>
+                        </div>
+                      </div>
+                      <div class="image-label after-label">After</div>
+                      <div class="transform-overlay">
+                        <button class="transform-btn" onclick="transformImage(2)">
+                          <i class="fas fa-magic"></i>
+                          <span>Transform</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Comparison Item 3 -->
+              <div class="comparison-item" id="comparison-3">
+                <div class="row align-items-center">
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="image-container position-relative">
+                      <div class="image-placeholder before-image">
+                        <div class="placeholder-content">
+                          <i class="fas fa-image fa-3x text-muted mb-3"></i>
+                          <h4 style="color: #666; font-weight: 300;">Before</h4>
+                          <p style="color: #999; font-size: 0.9rem;">Unprocessed shot</p>
+                        </div>
+                      </div>
+                      <div class="image-label before-label">Before</div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="image-container position-relative">
+                      <div class="image-placeholder after-image blurred">
+                        <div class="placeholder-content">
+                          <i class="fas fa-magic fa-3x text-primary mb-3"></i>
+                          <h4 style="color: #333; font-weight: 300;">After</h4>
+                          <p style="color: #666; font-size: 0.9rem;">Professional finish</p>
+                        </div>
+                      </div>
+                      <div class="image-label after-label">After</div>
+                      <div class="transform-overlay">
+                        <button class="transform-btn" onclick="transformImage(3)">
+                          <i class="fas fa-magic"></i>
+                          <span>Transform</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="container my-5">
+      <div class="card mx-auto" style="max-width: 400px;">
+        <a
+          href="mailto:changsarah231@gmail.com?subject=Photography%20Question&body=Hi%20Sarah%2C%20I%20wanted%20to%20connect..."
+          class="btn btn-primary"
+          style="background-color: #445e3c; border: none; border-radius: 999px; font-weight: 700; font-size: 1.125rem; padding: 0.6rem 1rem;"
+        >
+          CONTACT SARAH
+        </a>
+      </div>
+    </section>
+    </main>
+    <div data-include="/templates/partials/_footer.html"></div>
+  <script src="/include.js"></script>
+  
+  <script>
+    function transformImage(itemId) {
+      const comparisonItem = document.getElementById(`comparison-${itemId}`);
+      const afterImage = comparisonItem.querySelector('.after-img, .after-image');
+      const transformOverlay = comparisonItem.querySelector('.transform-overlay');
+      const transformBtn = comparisonItem.querySelector('.transform-btn');
+      
+      // Start the transformation
+      afterImage.classList.remove('blurred');
+      afterImage.classList.add('transformed');
+      
+      // Hide the transform button with a slight delay
+      setTimeout(() => {
+        transformOverlay.classList.add('hidden');
+      }, 300);
+      
+      // Add a "Reset" button after transformation
+      setTimeout(() => {
+        const resetBtn = document.createElement('button');
+        resetBtn.innerHTML = '<i class="fas fa-undo"></i> <span>Reset</span>';
+        resetBtn.className = 'transform-btn';
+        resetBtn.style.background = 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)';
+        resetBtn.onclick = () => resetImage(itemId);
+        
+        transformOverlay.innerHTML = '';
+        transformOverlay.appendChild(resetBtn);
+        transformOverlay.classList.remove('hidden');
+      }, 1500);
+    }
+    
+    function resetImage(itemId) {
+      const comparisonItem = document.getElementById(`comparison-${itemId}`);
+      const afterImage = comparisonItem.querySelector('.after-img, .after-image');
+      const transformOverlay = comparisonItem.querySelector('.transform-overlay');
+      
+      // Reset the image
+      afterImage.classList.add('blurred');
+      afterImage.classList.remove('transformed');
+      
+      // Hide reset button
+      transformOverlay.classList.add('hidden');
+      
+      // Show original transform button again
+      setTimeout(() => {
+        transformOverlay.innerHTML = `
+          <button class="transform-btn" onclick="transformImage(${itemId})">
+            <i class="fas fa-magic"></i>
+            <span>Transform</span>
+          </button>
+        `;
+        transformOverlay.classList.remove('hidden');
+      }, 500);
+    }
+  </script>
+  
+  <!-- No Bootstrap JS; include dropdown helper in include.js if needed -->
+  </body>
+</html>
