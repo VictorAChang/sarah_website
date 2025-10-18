@@ -1,151 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sarah's Yogi Page</title>
+    <title>Sarah's Author Page</title>
     <div data-include="/templates/partials/base_site.html"></div>
   </head>
   <body class="bg-white-page">
     <div data-include="/templates/partials/_navbar.html"></div>
     <main class="site-content">
-      <section
-        class="container my-5 position-relative"
-        style="min-height: 200px"
-      >
-        <div class="position-relative text-center" style="min-height: 120px">
-          <span
-            class="position-absolute top-50 start-50 translate-middle fw-bold author-bg-text"
-            aria-hidden="true"
-          >
-            Sarah Chang
-          </span>
-          <h2 class="yogi-header-text">
-            Yogi
-            <span class="underline"></span>
-          </h2>
-        </div>
-      </section>
-      <section class="container my-5">
+    <section class="container my-5 position-relative" style="min-height: 5px;">
+      <div class="w-100 position-relative">
+        <!-- centered logo -->
+        <a href="/index.html" aria-label="Home" class="d-inline-block">
+            <img
+                src="../assets/logo_authoryogi.png"
+                alt="Author Yogi logo"
+                class="img-fluid position-absolute"
+                style="max-width:180px; left:50%; top:50%; transform:translate(-50%,-50%);"
+            />
+        </a>
+        <!-- social buttons aligned to the right and vertically centered -->
         <div
-          class="position-relative d-flex flex-column align-items-center"
-          style="z-index: 2"
+          class="position-absolute d-flex"
+          style="right:0rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
         >
-          <h1
-            class="mb-4"
-            style="
-              color: #000;
-              margin-top: 3rem;
-              text-align: center;
-              font-size: 2.5rem;
-            "
+          <a
+            href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm social-btn"
+            aria-label="LinkedIn"
           >
-            Your Local Yogi
-          </h1>
-          <div
-            class="d-flex flex-wrap justify-content-center align-items-center my-4 gap-3"
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/bethechang_/"
+            target="_blank"
+            class="btn btn-outline-dark btn-sm social-btn"
+            aria-label="Instagram"
           >
-            <img
-              src="assets/yogi_sunrise.png"
-              alt="Yogi Sunrise"
-              class="rounded shadow"
-              style="width: 280px; height: 280px; object-fit: cover"
-            />
-            <img
-              src="assets/yogi_forest.png"
-              alt="Yogi Forest"
-              class="rounded shadow"
-              style="width: 280px; height: 280px; object-fit: cover"
-            />
-            <img
-              src="assets/yogi_landing.png"
-              alt="Yogi Landing"
-              class="rounded shadow"
-              style="width: 280px; height: 280px; object-fit: cover"
-            />
-          </div>
-          <h1
-            class="mb-3"
-            style="
-              color: #000;
-              margin-top: 3rem;
-              text-align: center;
-              font-size: 2.5rem;
-            "
-          >
-            Bio
-          </h1>
-          <div class="w-100">
-            <p style="color: #000; margin-left: 3rem; margin-right: 3rem">
-              <strong>RYT-200, Yoga Alliance</strong><br />
-              I began my yoga practice in a time where I needed both physical
-              and mental healing. In seeking more holistic practices and healthy
-              habits, yoga became foundational for my well-being. As a former
-              English teacher, I fell naturally into teaching others and
-              interlacing themes told through movement and meditation.
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="container-fluid p-0" style="background-image:url('../assets/author/author_bg.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
+      <style>
+        @media (min-width: 992px) {
+          .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
+          .author-illustrator-wrap { max-height: none !important; }
+        }
+      </style>
+      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
+        <img
+          class="author-illustrator-img"
+          src="../assets/author/author_illustrator.png"
+          alt="Author illustrator"
+          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
+        />
+      </div>
+        <div class="container text-center py-4"></div>
+    </section>
+    <section class="container my-5 text-center">
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: 2rem; text-align: center; font-size: 3rem; font-weight: normal;">YOUR LOCAL YOGI</h1>
+      <div class="d-flex justify-content-center align-items-center gap-3"></div>
+      <img src="../assets/yoga/yoga1.png" alt="Image 1" class="img-fluid" style="max-width: 200px;">
+      <img src="../assets/yoga/yoga2.png" alt="Image 2" class="img-fluid" style="max-width: 200px;">
+      </div>
+    </section>
+    </section>
+    <section class="container my-5">
+      <div
+        class="position-relative d-flex flex-column align-items-center"
+        style="z-index: 2"
+      >
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 3rem; font-weight: normal;">BIO</h1>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-12 col-md-8 pe-md-6 mx-auto text-center text-md-start" style="margin: 0;">
+          <div class="p-3 pe-0">
+            <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+              Sarah Chang, author of <em>Henry Goes to the Zoo con su Abuelo</em>, celebrates
+              the joys of bilingualism, creating a character representation of a
+              Spanish-English speaking family. This book can be found on the shelves
+              of children in several states across the nation and three countries.
+              Purchase your copy on Amazon.
             </p>
-            <p style="color: #000; margin-left: 3rem; margin-right: 3rem">
-              I attained my RYT-200 through Higher Power Healing, developing a
-              foundation in Hatha teaching practices. I began teaching at
-              Triangle Rock Club, focusing on providing a guided practice to
-              meet the needs of a diverse community including rock climbers,
-              veterans, and first-time yogis. My goal is to make yoga both
-              accessible and meaningful: meeting students where they are, and
-              guiding them toward where they want to go.
+            <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+              Another children's book, following the bilingual adventures of Henry, is currently in the works. 
+              Follow Sarah on Instagram to get updates on when you can buy the next book!
             </p>
-          </div>
-          <h1
-            class="mb-3"
-            style="
-              color: #000;
-              margin-top: 3rem;
-              text-align: center;
-              font-size: 2.5rem;
-            "
-          >
-            Class Offerings
-          </h1>
-          <div class="w-100">
-            <p style="color: #000; margin-left: 3rem; margin-right: 3rem">
-              <strong>Vinyasa Yoga</strong> <br />
-              This class will guide you through a series of poses, linking
-              breath to movement. Through this structured practice, you will
-              experience breathwork, flows designed to engage the whole body,
-              and a time for mindfulness.
-            </p>
-            <p style="color: #000; margin-left: 3rem; margin-right: 3rem">
-              <strong>Partner Yoga</strong> <br />
-              This class is great for your event—bridal parties, etc. Enjoy fun
-              poses with your besties and an amazing playlist to prepare for a
-              great day!
-            </p>
-            <p style="color: #000; margin-left: 3rem; margin-right: 3rem">
-              <strong>Ground with your Grinds</strong> <br />
-              Enjoy a grounding yoga and meditation session with your favorite
-              morning beverage.
+            <p style="z-index: 2; color: #000; margin: 0 0 0 0;"></p>
+              Additionally, Sarah offers author visitations for students of all ages!
+              Students will get to hear her read her book, ask questions about the
+              writing and design process, and participate in an activity to dive
+              deeper into the many lessons presented in this book.
             </p>
           </div>
         </div>
-      </section>
-      <section class="container my-5">
-        <div class="card mx-auto" style="max-width: 400px">
-          <div class="card-body text-center">
-            <h3 class="card-title mb-3" style="color: #e9b3a3">Contact Me</h3>
-            <p class="card-text mb-4" style="color: #000">
-              Have a question or just want to connect? Email me or message me on
-              Social Media!
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center" style="padding-left:0rem;">
+          <a href="https://www.amazon.com/Henry-Goes-Abuelo-Sarah-Chang/dp/1942923686" target="_blank">
+            <img src="../assets/author/henry_bookcover.jpg" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid rounded shadow mx-auto" style="max-width: 300px; margin-top: 1rem;" />
+          </a>
+        </div>
+      </div>
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: 0rem; text-align: center; font-size: 3rem; font-weight: normal;">FICTION</h1>
+      <div class="row">
+        <div class="col-12 pe-md-6" style="margin: 0;">
+          <div class="p-3 pe-0">
+            <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+              In the works, Sarah is writing her first novel. In an engaging tale of a young woman who is faced
+              with a 'yes' or 'no' option, the reader gets to embrace the journey of both answers, following this
+              woman as she struggles with some of life's most difficult moments, only to learn that her faith will
+              be the only constant in any choice she makes.
             </p>
-            <a
-              href="mailto:changsarah231@gmail.com?subject=Yogi%20Question&body=Hi%20Sarah%2C%20I%20wanted%20to%20connect..."
-              class="btn btn-primary"
-              style="background-color: #e9b3a3; border: none"
-            >
-              Email Sarah
-            </a>
           </div>
         </div>
-      </section>
+      </div>
+      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 3rem; font-weight: normal;">CURRICULUM</h1>
+      <div class="row align-items-center justify-content-between">
+        <div class="col-md-8 pe-md-6 text-center text-md-start" style="margin: 0;">
+          <div class="p-3 pe-0">
+        <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+          For 10 years, Sarah taught high school and middle school English in both Michigan and North Carolina. 
+          Though she no longer spends long hours in the classroom, she continues to write lessons for English teachers, 
+          designing engaging activities for students to further their reading skills.
+        </p>
+        <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
+          Click the Google Drive to link to public samples of Sarah's ELA curriculum.
+        </p>
+        <p class="text-center text-md-start" style="z-index: 2; color: #000; margin: 0 0 0 0;">
+          Additionally, Sarah writes Bible-based curriculum for churches to help students dive deeper into their understanding of the Bible.
+        </p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center" style="padding-left:0rem;">
+          <a href="https://drive.google.com/drive/folders/1O6yxRpKKjkWuU91m96ZXnctqTHmDJjZv" target="_blank">
+        <img src="../assets/author/dropbox.png" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid rounded shadow mx-auto mt-3 mt-md-1" style="max-width:150px;" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="container my-5">
+      <div class="card mx-auto" style="max-width: 400px;">
+        <a
+          href="mailto:changsarah231@gmail.com?subject=Author%20Question&body=Hi%20Sarah%2C%20I%20wanted%20to%20connect..."
+          class="btn btn-primary"
+          style="background-color: #445e3c; border: none; border-radius: 999px; font-weight: 700; font-size: 1.125rem; padding: 0.6rem 1rem;"
+        >
+          CONTACT SARAH
+        </a>
+      </div>
+    </section>
     </main>
     <div data-include="/templates/partials/_footer.html"></div>
-    <script src="/include.js"></script>
-    <!-- No Bootstrap JS; include dropdown helper in include.js if needed -->
+  <script src="/include.js"></script>
+  <!-- No Bootstrap JS; include dropdown helper in include.js if needed -->
   </body>
 </html>
