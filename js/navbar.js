@@ -1,4 +1,4 @@
-// Simple client-side include loader (root copy)
+// Navbar and includes loader
 // Usage: put <div data-include="/templates/partials/_navbar.html"></div>
 // then call loadIncludes() or include will auto-run on DOMContentLoaded.
 async function loadIncludes(root = document) {

@@ -1,0 +1,256 @@
+/* Index page responsive styles */
+@media (min-width: 992px) {
+  .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
+  .author-illustrator-wrap { max-height: none !important; }
+}
+
+/* Book animation styles */
+.book-container {
+  perspective: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.book {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  transform-style: preserve-3d;
+  margin: 2rem auto;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: transform 0.8s ease;
+}
+
+.book.open {
+  transform: translateX(200px);
+}
+
+.book-spine {
+  position: absolute;
+  left: -15px;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: linear-gradient(to bottom, #8B4513, #654321);
+  transform-origin: right center;
+  z-index: -1;
+  border-radius: 5px 0 0 5px;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 
+    inset 0 0 0 1px rgba(0,0,0,0.1),
+    0 5px 20px rgba(0,0,0,0.1);
+  transform-origin: left center;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.1), transparent);
+  z-index: 1;
+}
+
+.page-cover {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  z-index: 5;
+}
+
+.page-cover .page-content {
+  background: none;
+}
+
+.page-cover.flipped {
+  background: linear-gradient(135deg, #f8f8f8, #e8e8e8);
+  color: #333;
+}
+
+.page-cover.flipped .page-content {
+  background: none;
+}
+
+.page-cover.flipped .book-title,
+.page-cover.flipped .book-subtitle {
+  display: none;
+}
+
+.page-cover.flipped .page-back {
+  display: flex;
+}
+
+.page-back {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+}
+
+.cover-back-image {
+  width: 110%;
+  height: 110%;
+  object-fit: cover;
+  display: block;
+  transform: translate(-5%, -5%);
+}
+
+.cover-back-text {
+  display: none;
+}
+
+.page-1 { z-index: 4; }
+.page-2 { z-index: 3; }
+.page-3 { z-index: 2; }
+.page-4 { z-index: 1; }
+
+.page {
+  transform: rotateY(0deg);
+}
+
+.page.flipped {
+  transform: rotateY(-180deg);
+}
+
+.page-content {
+  padding: 4rem 3rem 4rem 4rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(0,0,0,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.book-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.book-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.icon-wrapper {
+  background: rgba(0,0,0,0.05);
+  border: 2px solid #e9ecef;
+  border-radius: 50%;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.icon-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.page-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.btn {
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.page-indicators {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.indicator {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 2px solid transparent;
+}
+
+.indicator:hover {
+  background: rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.indicator.active {
+  background: #2c3e50;
+  color: white;
+  border-color: #34495e;
+}
+
+@media (max-width: 768px) {
+  .book {
+    width: 300px;
+    height: 450px;
+  }
+  
+  .book.open {
+    transform: translateX(100px);
+  }
+  
+  .page-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .page-title, .book-title {
+    font-size: 1.8rem;
+  }
+  
+  .page-text {
+    font-size: 1rem;
+  }
+  
+  .page-indicators {
+    gap: 8px;
+  }
+  
+  .indicator {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
