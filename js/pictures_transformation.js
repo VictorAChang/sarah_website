@@ -3,25 +3,21 @@
 
 const photoSets = [
 	{
-		main: '../assets/about/sanfran1.png',
-		polaroid: '../assets/about/sanfran2.png',
+		main: '../assets/photography/IMG_5816.jpg',
+		polaroid: '../assets/photography/IMG_5816_Edit.jpg',
 	},
 	{
-		main: '../assets/about/hiking.png',
-		polaroid: '../assets/about/sanfran1.png',
+		main: '../assets/photography/IMG_4780.jpg',
+		polaroid: '../assets/photography/IMG_4780_Edit.jpg',
 	},
 	{
-		main: '../assets/author/author_bg.jpg',
-		polaroid: '../assets/about/hiking.png',
+		main: '../assets/photography/IMG_6115.jpg',
+		polaroid: '../assets/photography/IMG_6115_Edit.jpg',
 	},
 	{
-		main: '../assets/about/sanfran2.png',
-		polaroid: '../assets/author/author_bg.jpg',
+		main: '../assets/photography/IMG_5610.jpg',
+		polaroid: '../assets/photography/IMG_5610_Edit.jpg',
 	},
-	{
-		main: '../assets/about/hiking.png',
-		polaroid: '../assets/about/sanfran2.png',
-	}
 ];
 
 let currentIndex = 0;
