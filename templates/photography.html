@@ -3,148 +3,220 @@
   <head>
     <title>Sarah's Photography Page</title>
     <div data-include="/templates/partials/base_site.html"></div>
-    <link rel="stylesheet" href="../styles/pictures_transformation.css">
+    <link rel="stylesheet" href="../styles/pictures_transformation.css" />
   </head>
   <body class="bg-white-page">
     <div data-include="/templates/partials/_navbar.html"></div>
     <main class="site-content">
-    <section class="container my-5 position-relative" style="min-height: 5px;">
-      <div class="w-100 position-relative">
-        <!-- centered logo -->
-        <a href="/index.html" aria-label="Home" class="d-inline-block">
+      <section class="container my-5 position-relative" style="min-height: 5px">
+        <div class="w-100 position-relative">
+          <!-- centered logo -->
+          <a href="/index.html" aria-label="Home" class="d-inline-block">
             <img
-                src="../assets/logo_authoryogi.png"
-                alt="Author Yogi logo"
-                class="img-fluid position-absolute"
-                style="max-width:180px; left:50%; top:50%; transform:translate(-50%,-50%);"
+              src="../assets/logo_authoryogi.png"
+              alt="Author Yogi logo"
+              class="img-fluid position-absolute"
+              style="
+                max-width: 180px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+              "
             />
-        </a>
-        <!-- social buttons aligned to the right and vertically centered -->
-        <div
-          class="position-absolute d-flex"
-          style="right:0rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
-        >
-          <a
-            href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
-            target="_blank"
-            class="btn btn-outline-dark btn-sm social-btn"
-            aria-label="LinkedIn"
-          >
-            <i class="bi bi-linkedin"></i>
           </a>
-          <a
-            href="https://www.instagram.com/bethechang_/"
-            target="_blank"
-            class="btn btn-outline-dark btn-sm social-btn"
-            aria-label="Instagram"
+          <!-- social buttons aligned to the right and vertically centered -->
+          <div
+            class="position-absolute d-flex"
+            style="
+              right: 0rem;
+              top: 50%;
+              transform: translateY(-50%);
+              gap: 0.5rem;
+            "
           >
-            <i class="bi bi-instagram"></i>
-          </a>
+            <a
+              href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm social-btn"
+              aria-label="LinkedIn"
+            >
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/bethechang_/"
+              target="_blank"
+              class="btn btn-outline-dark btn-sm social-btn"
+              aria-label="Instagram"
+            >
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="container-fluid p-0" style="background-image:url('../assets/author/author_bg.jpg'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
-        <img
-          class="author-illustrator-img"
-          src="../assets/author/author_illustrator.png"
-          alt="Photography header"
-          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
-        />
-      </div>
-    </section>
-    <section class="container my-5">
-      <div
-        class="position-relative d-flex flex-column align-items-center"
-        style="z-index: 2; min-height: 60vh;"
+      </section>
+      <section
+        class="container-fluid p-0"
+        style="
+          background-image: url('../assets/author/author_bg.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        "
       >
-        <h1 class="photography-main-header" style="color: #000; margin-top: 3rem; margin-bottom: 2rem; text-align: center; font-size: 3rem; font-weight: normal;">PHOTOGRAPHY</h1>
-        <style>
-          @media (max-width: 768px) {
-            .photography-main-header {
-              font-size: 2.2rem !important;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            .photography-main-header {
-              font-size: 1.8rem !important;
-            }
-          }
-          
-          /* Before & After Editing header */
-          @media (max-width: 768px) {
-            .photography-sub-header {
-              font-size: 1.8rem !important;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            .photography-sub-header {
-              font-size: 1.4rem !important;
-            }
-          }
-          
-          /* Dynamic section headers (Wedding, Graduation, etc.) */
-          @media (max-width: 768px) {
-            .photography-section-header {
-              font-size: 1.5rem !important;
-            }
-          }
-          
-          @media (max-width: 480px) {
-            .photography-section-header {
-              font-size: 1.2rem !important;
-            }
-          }
-        </style>
-        <!-- Photography Editing Showcase -->
-        <div class="row justify-content-center">
-          <div class="col-12 col-lg-10">
-            <div class="text-center mb-4">
-              <h2 class="photography-sub-header" style="color: #333; font-size: 2.2rem; font-weight: 300; margin-bottom: 1rem;">Before & After Editing</h2>
-              <p style="color: #666; font-size: 1.1rem; margin-bottom: 3rem;">
-                Discover the transformation through professional photo editing
-              </p>
-            </div>
-            <!-- Before/After Comparison Grid -->
-            <div class="comparison-gallery">
-              <!-- Photography Section with Dynamic Header -->
-              <div class="section-header text-center mb-4 mt-4" id="dynamic-header">
-                <h3 id="section-title" class="photography-section-header" style="color: #333; font-size: 1.8rem; font-weight: 400; margin-bottom: 0.5rem;">
-                  <i id="section-icon" class="fas fa-heart text-danger me-2"></i><span id="section-name">Wedding Photography</span>
-                </h3>
-                <p id="section-description" style="color: #666; font-size: 1rem;">Capturing your special day with timeless elegance</p>
-              </div>
-              <!-- Wedding Photography Carousel -->
-              <div class="comparison-item mb-5" id="wedding-carousel">
-                <!-- Carousel Controls -->
-                <div class="text-center mb-3">
-                  <button class="btn btn-outline-secondary btn-sm me-2" onclick="previousWeddingImage()">
-                    <i class="fas fa-chevron-left"></i> Previous
-                  </button>
-                  <span id="carousel-counter" style="color: #666; font-weight: 500;">1 of 5</span>
-                  <button class="btn btn-outline-secondary btn-sm ms-2" onclick="nextWeddingImage()">
-                    Next <i class="fas fa-chevron-right"></i>
-                  </button>
-                </div>
-                <!-- Carousel Images -->
-                <div class="row align-items-center">
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <div class="image-container position-relative">
-                      <img id="wedding-before-img" src="../assets/about/sanfran1.png" alt="Wedding Before Editing" class="before-img img-fluid" style="width: 100%; height: auto; border-radius: 10px;">
-                      <div class="image-label before-label">Before</div>
+        <div
+          class="d-flex justify-content-center align-items-center author-illustrator-wrap"
+          style="
+            min-height: 140px;
+            max-height: 50vh;
+            padding: 0.25rem 0;
+            overflow: hidden;
+          "
+        >
+          <img
+            class="author-illustrator-img"
+            src="../assets/author/author_illustrator.png"
+            alt="Photography header"
+            style="
+              height: clamp(340px, 22vh, 320px);
+              max-width: 100%;
+              width: auto;
+              object-fit: contain;
+              display: block;
+            "
+          />
+        </div>
+      </section>
+      <section class="container-fluid my-4">
+        <div class="mx-auto px-3 px-md-5" style="max-width: 1200px">
+          I love turning everyday moments into something a little more magical.
+          When I edit your photos, my goal isn’t to change how things looked,
+          it’s to bring out how they felt. Soft light, rich color, and a touch
+          of dreaminess are what make my style come alive.
+        </div>
+      </section>
+      <section class="w-100 my-5" style="background-color: #f5ecd7">
+        <div
+          class="position-relative d-flex flex-column align-items-center"
+          style="
+            z-index: 2;
+            min-height: 35vh;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+          "
+        >
+          <div class="text-center mb-4" style="max-width: 800px">
+            <style>
+              @media (max-width: 768px) {
+                .photography-main-header {
+                  font-size: 2.2rem !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .photography-main-header {
+                  font-size: 1.8rem !important;
+                }
+              }
+              @media (max-width: 768px) {
+                .photography-sub-header {
+                  font-size: 1.8rem !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .photography-sub-header {
+                  font-size: 1.4rem !important;
+                }
+              }
+              @media (max-width: 768px) {
+                .photography-section-header {
+                  font-size: 1.5rem !important;
+                }
+              }
+              @media (max-width: 480px) {
+                .photography-section-header {
+                  font-size: 1.2rem !important;
+                }
+              }
+              .comparison-gallery {
+                border-radius: 16px;
+                padding: 1.2rem 0.5rem;
+                background: none;
+              }
+            </style>
+            <!-- Photography Editing Showcase -->
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10">
+                <!-- Before/After Comparison Grid -->
+                <div class="comparison-gallery">
+                  <!-- Wedding Photography Carousel -->
+                  <div class="comparison-item mb-4" id="wedding-carousel">
+                    <!-- Carousel Controls -->
+                    <div class="text-center mb-2">
+                      <button
+                        class="btn btn-outline-secondary btn-sm me-2"
+                        onclick="previousWeddingImage()"
+                      >
+                        <i class="fas fa-chevron-left"></i> Previous
+                      </button>
+                      <span
+                        id="carousel-counter"
+                        style="color: #666; font-weight: 500"
+                        >1 of 5</span
+                      >
+                      <button
+                        class="btn btn-outline-secondary btn-sm ms-2"
+                        onclick="nextWeddingImage()"
+                      >
+                        Next <i class="fas fa-chevron-right"></i>
+                      </button>
                     </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="image-container position-relative">
-                      <img id="wedding-after-img" src="../assets/about/sanfran2.png" alt="Wedding After Editing" class="after-img img-fluid blurred" style="width: 100%; height: auto; border-radius: 10px;">
-                      <div class="image-label after-label">After</div>
-                      <div class="transform-overlay" id="wedding-transform-overlay">
-                        <button class="transform-btn" onclick="transformWeddingImage()">
-                          <i class="fas fa-magic"></i>
-                          <span>Transform</span>
-                        </button>
+                    <!-- Carousel Images -->
+                    <div class="row align-items-center">
+                      <div class="col-md-6 mb-2 mb-md-0">
+                        <div class="image-container position-relative">
+                          <img
+                            id="wedding-before-img"
+                            src="../assets/about/sanfran1.png"
+                            alt="Wedding Before Editing"
+                            class="before-img img-fluid"
+                            style="
+                              width: 100%;
+                              height: auto;
+                              border-radius: 10px;
+                              max-height: 260px;
+                              object-fit: cover;
+                            "
+                          />
+                          <div class="image-label before-label">Before</div>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="image-container position-relative">
+                          <img
+                            id="wedding-after-img"
+                            src="../assets/about/sanfran2.png"
+                            alt="Wedding After Editing"
+                            class="after-img img-fluid blurred"
+                            style="
+                              width: 100%;
+                              height: auto;
+                              border-radius: 10px;
+                              max-height: 260px;
+                              object-fit: cover;
+                            "
+                          />
+                          <div class="image-label after-label">After</div>
+                          <div
+                            class="transform-overlay"
+                            id="wedding-transform-overlay"
+                          >
+                            <button
+                              class="transform-btn"
+                              onclick="transformWeddingImage()"
+                            >
+                              <i class="fas fa-magic"></i>
+                              <span>Transform</span>
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -153,24 +225,114 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="container my-5">
-      <div class="card mx-auto" style="max-width: 400px;">
-        <a
-          href="mailto:changsarah231@gmail.com?subject=Photography%20Question&body=Hi%20Sarah%2C%20I%20wanted%20to%20connect..."
-          class="btn btn-primary"
-          style="background-color: #445e3c; border: none; border-radius: 999px; font-weight: 700; font-size: 1.125rem; padding: 0.6rem 1rem;"
-        >
-          CONTACT SARAH
-        </a>
-      </div>
-    </section>
+      </section>
+      <section class="container my-5">
+        <h2 class="text-center my-4" style="font-size: 3rem">SERVICES</h2>
+        <div class="text-center mb-4">
+          <img
+            src="../assets/author/author_bg.jpg"
+            alt="Photography Services"
+            class="img-fluid"
+            style="max-width: 480px; border-radius: 12px"
+          />
+        </div>
+        <div class="row justify-content-center align-items-start mt-4">
+          <div
+            class="col-lg-7 col-md-10 mb-4 mb-lg-0 d-flex flex-column justify-content-center"
+          >
+            <div class="text-start" style="max-width: 750px">
+              <h6><strong>Portraits</strong></h6>
+              <div>
+                Whether it's a milestone or a quiet moment in time, I create
+                portraits that feel warm, genuine, and full of life: memories
+                you'll treasure for years to come.
+              </div>
+              <br />
+              <h6 class="mt-3"><strong>Birthday Parties</strong></h6>
+              <div>
+                From candid giggles to big surprises, I'll capture the energy
+                and emotion of your celebration so you can relive the joy long
+                after the party ends.
+              </div>
+              <br />
+              <h6 class="mt-3"><strong>Professional Headshots</strong></h6>
+              <div>
+                I create headshots that showcase your personality and
+                professionalism, the perfect balance of approachability and
+                confidence to elevate your brand or career.
+              </div>
+              <br />
+              <h6 class="mt-3"><strong>Elopements / Micro Weddings</strong></h6>
+              <div>
+                Your day may be small, but the love behind it is infinite. I
+                focus on the little details, stolen glances, and emotions that
+                make your wedding day truly yours.
+              </div>
+              <br />
+              <h6 class="mt-3"><strong>Lifestyle</strong></h6>
+              <div>
+                From cozy mornings to spontaneous adventures, lifestyle sessions
+                are about capturing you as you are: natural, relaxed, and full
+                of genuine emotion.
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-5 col-md-8 d-flex flex-column justify-content-center align-items-lg-start align-items-center"
+          >
+            <div class="text-start w-100" style="max-width: 400px">
+              <br />
+              <div class="mb-3">
+                45-90 minute session<br /><strong>Starting at:</strong> $250
+              </div>
+              <br />
+              <br />
+              <div class="mb-4">
+                1-3 hours<br /><strong>Starting at:</strong> $200
+              </div>
+              <br />
+              <br />
+              <div class="mb-3">
+                30-60 minutes<br /><strong>Starting at:</strong> $75
+              </div>
+              <br />
+              <br />
+              <br />
+              <div class="mb-4">
+                1-3 hours<br /><strong>Starting at:</strong> $500
+              </div>
+              <br />
+              <br />
+              <div class="mb-3">
+                60-90 minutes<br /><strong>Starting at:</strong> $200
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container my-5">
+        <div class="card mx-auto" style="max-width: 400px">
+          <a
+            href="mailto:changsarah231@gmail.com?subject=Photography%20Question&body=Hi%20Sarah%2C%20I%20wanted%20to%20connect..."
+            class="btn btn-primary"
+            style="
+              background-color: #445e3c;
+              border: none;
+              border-radius: 999px;
+              font-weight: 700;
+              font-size: 1.125rem;
+              padding: 0.6rem 1rem;
+            "
+          >
+            CONTACT SARAH
+          </a>
+        </div>
+      </section>
     </main>
     <div data-include="/templates/partials/_footer.html"></div>
-  <script src="../js/navbar.js"></script>
-  <script src="../js/pictures_transformation.js"></script>
-  
-  <!-- No Bootstrap JS; include dropdown helper in navbar.js if needed -->
+    <script src="../js/navbar.js"></script>
+    <script src="../js/pictures_transformation.js"></script>
+
+    <!-- No Bootstrap JS; include dropdown helper in navbar.js if needed -->
   </body>
 </html>
