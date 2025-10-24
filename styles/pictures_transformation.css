@@ -12,8 +12,8 @@
 /* Reinvented Picture Transformation Styles */
 
 .main-image-square {
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   background: #f5ecd7;
   border-radius: 0;
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -56,8 +56,8 @@
 }
 
 .polaroid-image-container {
-  width: 220px;
-  height: 270px;
+  width: 320px;
+  height: 370px;
   background: #ededed;
   border-radius: 0;
   transform: rotate(10deg);
@@ -72,7 +72,7 @@
 
 .polaroid-image-container img {
   width: 100%;
-  height: 190px;
+  height: 260px;
   object-fit: cover;
   border-radius: 0;
   transform: none;
@@ -109,21 +109,35 @@
 }
 
 @media (max-width: 600px) {
+  /* Center align main intro and services text on mobile */
+  .mobile-center,
+  .services-section .row > div,
+  .services-section .row > div > div,
+  .services-section h6,
+  .services-section p,
+  .services-section {
+    text-align: center !important;
+  }
   .main-image-square {
-    width: 90vw;
-    height: 90vw;
-    min-width: 180px;
-    min-height: 180px;
-    max-width: 320px;
-    max-height: 320px;
+    width: 60vw;
+    height: 60vw;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 180px;
+    max-height: 180px;
   }
   .polaroid-image-container {
-    width: 60vw;
-    height: 70vw;
+    width: 75vw;
+    height: 85vw;
     min-width: 120px;
     min-height: 140px;
-    max-width: 220px;
+    max-width: 240px;
     max-height: 270px;
+    padding: 12px 8px 38px 8px;
+  }
+  .polaroid-image-container img {
+    height: 74vw;
+    max-height: 205px;
   }
 }
 /* Photography comparison gallery styles */
