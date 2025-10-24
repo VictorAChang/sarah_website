@@ -1,31 +1,147 @@
+/* Rose beige background for the whole section */
+#pictures-transformation {
+  background: #d0b5a1;
+  width: 100%;
+  padding: 2.5rem 0;
+}
 /* Photography page responsive media query */
 @media (min-width: 992px) {
   .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
   .author-illustrator-wrap { max-height: none !important; }
 }
+/* Reinvented Picture Transformation Styles */
 
+.main-image-square {
+  width: 300px;
+  height: 300px;
+  background: #f5ecd7;
+  border-radius: 0;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-image-square img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  border: 6px solid #fff;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 85%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 999px;
+  font-weight: 300;
+  font-size: 1.9rem;
+  font-family:cursive;
+  padding: 0.1rem 1.0rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s, color 0.2s;
+}
+.edit-btn:hover {
+  background: #f5ecd7;
+  color: #222;
+}
+
+.polaroid-image-container {
+  width: 220px;
+  height: 270px;
+  background: #ededed;
+  border-radius: 0;
+  transform: rotate(10deg);
+  box-shadow: 0 6px 32px rgba(0,0,0,0.12);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  margin-left: -40px;
+  padding: 18px 12px 38px 12px;
+}
+
+.polaroid-image-container img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 0;
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #eee;
+  transition: filter 1.2s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.polaroid-blur {
+  filter: blur(18px);
+}
+.polaroid-clear {
+  filter: blur(0px);
+}
+
+.arrow-btn {
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 999px;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+.arrow-btn:hover {
+  background: #f5ecd7;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .main-image-square {
+    width: 90vw;
+    height: 90vw;
+    min-width: 180px;
+    min-height: 180px;
+    max-width: 320px;
+    max-height: 320px;
+  }
+  .polaroid-image-container {
+    width: 60vw;
+    height: 70vw;
+    min-width: 120px;
+    min-height: 140px;
+    max-width: 220px;
+    max-height: 270px;
+  }
+}
 /* Photography comparison gallery styles */
 .comparison-gallery {
   margin-top: 2rem;
 }
 
 .comparison-item {
-  border-radius: 15px;
   overflow: hidden;
-  background: #fff;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: transparent;
+  box-shadow: none;
+  transition: transform 0.3s ease;
 }
 
-.comparison-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 35px rgba(0,0,0,0.15);
-}
 
 .image-container {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
 }
 
 .image-placeholder {
@@ -33,28 +149,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.before-image {
-  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-  border: 2px dashed #dee2e6;
-}
-
-.after-image {
-  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
-  border: 2px solid #2196F3;
-  box-shadow: 0 4px 15px rgba(33, 150, 243, 0.2);
-}
-
-.placeholder-content {
-  text-align: center;
-  padding: 2rem;
-}
-
-/* Interactive transformation effects */
-.blurred {
   filter: blur(25px);
   transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -62,7 +156,7 @@
 .after-img.transformed {
   filter: blur(0px);
   transform: scale(1.02);
-  box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+  box-shadow: none;
 }
 
 .image-placeholder.transformed {
@@ -116,7 +210,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background: rgba(0,0,0,0.7);
+  background: none;
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -139,29 +233,4 @@
 
 .before-image:hover {
   border-color: #adb5bd;
-  background: linear-gradient(135deg, #f1f3f4, #e0e0e0);
-}
-
-.after-image:hover {
-  border-color: #1976D2;
-  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.3);
-}
-
-/* Mobile responsive styles */
-@media (max-width: 768px) {
-  .comparison-item {
-    margin-bottom: 2rem;
-  }
-  
-  .placeholder-content {
-    padding: 1.5rem;
-  }
-  
-  .placeholder-content h4 {
-    font-size: 1.2rem;
-  }
-  
-  .placeholder-content p {
-    font-size: 0.8rem;
-  }
 }
