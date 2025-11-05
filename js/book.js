@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
   const book = document.querySelector('.book');
   let autoFlipInterval;
   
-  // Start auto-flip
-  startAutoFlip();
+  // // Start auto-flip
+  // startAutoFlip();
   
   // Click handlers for pages
   pages.forEach(page => {
@@ -30,16 +30,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  function startAutoFlip() {
-    autoFlipInterval = setInterval(() => {
-      nextPage();
-    }, 4000);
-  }
+  // function startAutoFlip() {
+  //   autoFlipInterval = setInterval(() => {
+  //     nextPage();
+  //   }, 4000);
+  // }
   
-  function resetAutoFlip() {
-    clearInterval(autoFlipInterval);
-    setTimeout(startAutoFlip, 8000); // Resume after 8 seconds
-  }
+  // function resetAutoFlip() {
+  //   clearInterval(autoFlipInterval);
+  //   setTimeout(startAutoFlip, 8000); // Resume after 8 seconds
+  // }
   
   function nextPage() {
     currentPage = currentPage >= totalPages - 1 ? 0 : currentPage + 1;
