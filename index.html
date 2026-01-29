@@ -1,108 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <title>Sarah's Landing Page</title>
-    <div data-include="/templates/partials/base_site.html"></div>
-    <link rel="stylesheet" href="styles/book.css">
+    <!-- base_site.html - shared head resources -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Default meta / social (can be overridden per-page) -->
+    <meta
+      name="description"
+      content="Sarah Chang — author and yoga teacher. Children's books, yoga classes, and curriculum resources."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sarah Chang" />
+    <meta
+      property="og:description"
+      content="Author of children's books and yoga teacher offering classes and curriculum."
+    />
+    <meta property="og:image" content="/assets/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Favicon and theme -->
+    <link rel="icon" href="/assets/logo.png" />
+    <meta name="theme-color" content="#e9b3a3" />
+
+    <!-- Bootstrap CSS (latest) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Site stylesheet (absolute path ensures same across pages) -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <link rel="stylesheet" href="styles/book.css" />
   </head>
   <body class="bg-white-page">
-    <!-- navbar include -->
-    <div data-include="templates/partials/_navbar.html"></div>
-    <main class="site-content">
-    <section class="container-fluid p-0">
-      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
-        <img
-          class="author-illustrator-img"
-          src="../assets/logo.png"
-          alt="Author illustrator"
-          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
-        />
+    <!-- navbar -->
+    <nav
+      class="navbar py-4"
+      style="background-color: #fafafa; min-height: 100px"
+    >
+      <div class="container-fluid">
+        <!-- Right section -->
+        <div class="d-flex align-items-center ms-auto">
+          <!-- Links visible on medium+ screens -->
+          <div class="d-none d-md-flex align-items-center">
+            <a class="nav-link px-2 text-dark" href="/templates/author.html"
+              >AUTHOR</a
+            >
+            <span class="text-muted px-1">|</span>
+            <a class="nav-link px-2 text-dark" href="/templates/yoga.html"
+              >YOGI</a
+            >
+            <span class="text-muted px-1">|</span>
+            <a
+              class="nav-link px-2 text-dark"
+              href="/templates/photography.html"
+              >PHOTOGRAPHY</a
+            >
+            <span class="text-muted px-1">|</span>
+            <a class="nav-link px-2 text-dark" href="/templates/about.html"
+              >ABOUT</a
+            >
+          </div>
+
+          <!-- Hamburger dropdown (only on small screens) -->
+          <div class="dropdown d-md-none ms-2">
+            <button
+              class="btn btn-outline-dark dropdown-toggle"
+              type="button"
+              id="navDropdown"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navDropdown"
+              style="right: -0.5rem"
+            >
+              <li>
+                <a class="dropdown-item" href="/templates/author.html"
+                  >Author</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/templates/yoga.html">Yogi</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/templates/photography.html"
+                  >Photography</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="/templates/about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </section>
+    </nav>
+    <main class="site-content">
+      <section class="container-fluid p-0">
+        <div
+          class="d-flex justify-content-center align-items-center author-illustrator-wrap"
+          style="
+            min-height: 140px;
+            max-height: 50vh;
+            padding: 0.25rem 0;
+            overflow: hidden;
+          "
+        >
+          <img
+            class="author-illustrator-img"
+            src="../assets/logo.png"
+            alt="Author illustrator"
+            style="
+              height: clamp(340px, 22vh, 320px);
+              max-width: 100%;
+              width: auto;
+              object-fit: contain;
+              display: block;
+            "
+          />
+        </div>
+      </section>
       <section class="container-fluid py-5 bg-light">
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-10">
-        <div class="book-container">
-        <div class="book" id="book">
-        <div class="book-spine"></div>
-        <div class="page page-cover" data-page="0">
-          <div class="page-content">
-        <h2 class="book-title">Sarah's Portfolio</h2>
-        <p class="book-subtitle">Author | Yoga | Photography | About</p>
-        <div class="page-back">
-          <img src="assets/about/dogs.png" alt="Pam and Benny" class="cover-back-image">
-          <p class="cover-back-text">Meet Pam & Benny</p>
-        </div>
-          </div>
-        </div>
-        
-        <div class="page page-1" data-page="1">
-          <div class="page-content">
-        <div class="icon-wrapper mb-4">
-          <i class="fas fa-feather-alt fa-3x text-primary"></i>
-        </div>
-        <h3 class="page-title text-dark fw-bold">Author</h3>
-        <p class="page-text text-muted mb-4">Dive into captivating stories and literary adventures that inspire the soul</p>
-        <a href="templates/author.html" class="btn btn-primary btn-lg px-4 py-2 rounded-pill">
-          Explore Stories <i class="fas fa-arrow-right ms-2"></i>
-        </a>
-          </div>
-        </div>
-        
-        <div class="page page-2" data-page="2">
-          <div class="page-content">
-        <div class="icon-wrapper mb-4">
-          <i class="fas fa-lotus-pose fa-3x text-success"></i>
-        </div>
-        <h3 class="page-title text-dark fw-bold">Yoga</h3>
-        <p class="page-text text-muted mb-4">Find inner peace and strength through mindful movement and meditation</p>
-        <a href="templates/yoga.html" class="btn btn-success btn-lg px-4 py-2 rounded-pill">
-          Find Balance <i class="fas fa-om ms-2"></i>
-        </a>
-          </div>
-        </div>
-        
-        <div class="page page-3" data-page="3">
-          <div class="page-content">
-        <div class="icon-wrapper mb-4">
-          <i class="fas fa-camera-retro fa-3x text-info"></i>
-        </div>
-        <h3 class="page-title text-dark fw-bold">Photography</h3>
-        <p class="page-text text-muted mb-4">Witness the world through my lens - moments frozen in time and beauty</p>
-        <a href="templates/photography.html" class="btn btn-info btn-lg px-4 py-2 rounded-pill">
-          View Gallery <i class="fas fa-images ms-2"></i>
-        </a>
-          </div>
-        </div>
-        
-        <div class="page page-4" data-page="4">
-          <div class="page-content">
-        <div class="icon-wrapper mb-4">
-          <i class="fas fa-user fa-3x text-warning"></i>
-        </div>
-        <h3 class="page-title text-dark fw-bold">About</h3>
-        <p class="page-text text-muted mb-4">Discover the journey, passion, and story behind the creative mind</p>
-        <a href="templates/about.html" class="btn btn-warning btn-lg px-4 py-2 rounded-pill">
-          Learn More <i class="fas fa-heart ms-2"></i>
-        </a>
-          </div>
-        </div>
-          </div>
-          
-          <!-- Page indicators -->
-          <div class="page-indicators mt-4 text-center">
-        <span class="indicator active" data-page="0">Cover</span>
-        <span class="indicator" data-page="1">Author</span>
-        <span class="indicator" data-page="2">Yoga</span>
-        <span class="indicator" data-page="3">Photography</span>
-        <span class="indicator" data-page="4">About</span>
-          </div>
-        </div>
-          </div>
-        </div>
-        </section>
-      
+            <div class="book-container">
+              <div class="book" id="book">
+                <div class="book-spine"></div>
+                <div class="page page-cover" data-page="0">
+                  <div class="page-content">
+                    <h2 class="book-title">Sarah's Portfolio</h2>
+                    <p class="book-subtitle">
+                      Author | Yoga | Photography | About
+                    </p>
+                    <div class="page-back">
+                      <img
+                        src="assets/about/dogs.png"
+                        alt="Pam and Benny"
+                        class="cover-back-image"
+                      />
+                      <p class="cover-back-text">Meet Pam & Benny</p>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="page page-1" data-page="1">
+                  <div class="page-content">
+                    <div class="icon-wrapper mb-4">
+                      <i class="fas fa-feather-alt fa-3x text-primary"></i>
+                    </div>
+                    <h3 class="page-title text-dark fw-bold">Author</h3>
+                    <p class="page-text text-muted mb-4">
+                      Dive into captivating stories and literary adventures that
+                      inspire the soul
+                    </p>
+                    <a
+                      href="templates/author.html"
+                      class="btn btn-primary btn-lg px-4 py-2 rounded-pill"
+                    >
+                      Explore Stories <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="page page-2" data-page="2">
+                  <div class="page-content">
+                    <div class="icon-wrapper mb-4">
+                      <i class="fas fa-lotus-pose fa-3x text-success"></i>
+                    </div>
+                    <h3 class="page-title text-dark fw-bold">Yoga</h3>
+                    <p class="page-text text-muted mb-4">
+                      Find inner peace and strength through mindful movement and
+                      meditation
+                    </p>
+                    <a
+                      href="templates/yoga.html"
+                      class="btn btn-success btn-lg px-4 py-2 rounded-pill"
+                    >
+                      Find Balance <i class="fas fa-om ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="page page-3" data-page="3">
+                  <div class="page-content">
+                    <div class="icon-wrapper mb-4">
+                      <i class="fas fa-camera-retro fa-3x text-info"></i>
+                    </div>
+                    <h3 class="page-title text-dark fw-bold">Photography</h3>
+                    <p class="page-text text-muted mb-4">
+                      Witness the world through my lens - moments frozen in time
+                      and beauty
+                    </p>
+                    <a
+                      href="templates/photography.html"
+                      class="btn btn-info btn-lg px-4 py-2 rounded-pill"
+                    >
+                      View Gallery <i class="fas fa-images ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="page page-4" data-page="4">
+                  <div class="page-content">
+                    <div class="icon-wrapper mb-4">
+                      <i class="fas fa-user fa-3x text-warning"></i>
+                    </div>
+                    <h3 class="page-title text-dark fw-bold">About</h3>
+                    <p class="page-text text-muted mb-4">
+                      Discover the journey, passion, and story behind the
+                      creative mind
+                    </p>
+                    <a
+                      href="templates/about.html"
+                      class="btn btn-warning btn-lg px-4 py-2 rounded-pill"
+                    >
+                      Learn More <i class="fas fa-heart ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Page indicators -->
+              <div class="page-indicators mt-4 text-center">
+                <span class="indicator active" data-page="0">Cover</span>
+                <span class="indicator" data-page="1">Author</span>
+                <span class="indicator" data-page="2">Yoga</span>
+                <span class="indicator" data-page="3">Photography</span>
+                <span class="indicator" data-page="4">About</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- footer include -->
     <div data-include="/templates/partials/_footer.html"></div>
