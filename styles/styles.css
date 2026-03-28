@@ -51,3 +51,30 @@ body {
     margin-top: 0.75rem !important; /* lower than paragraph on mobile */
   }
 }
+
+/* navbar adjustments for mobile */
+.nav-hamburger-btn {
+  font-size: 1.6rem;
+  line-height: 1;
+  border: 1px solid #222;
+  color: #222;
+  border-radius: 0;
+  padding: 0.35rem 0.65rem;
+  background: #fff;
+}
+
+
+.mobile-nav-dropdown {
+  position: relative;
+}
+
+.mobile-nav-menu {
+  left: auto !important;
+  right: 0 !important;
+  transform: none !important;
+}
+
+.mobile-nav-menu .dropdown-item {
+  font-size: 1rem;
+  padding: 0.65rem 1rem;
+}

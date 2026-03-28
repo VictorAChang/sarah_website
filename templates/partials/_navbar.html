@@ -1,8 +1,7 @@
 <nav class="navbar py-4" style="background-color: #ffffff; min-height: 120px">
   <div class="container-fluid">
-    <!-- Right section -->
     <div class="d-flex align-items-center ms-auto">
-      <!-- Links visible on medium+ screens -->
+      <!-- Desktop links -->
       <div class="d-none d-md-flex align-items-center">
         <a
           class="nav-link px-4 text-dark fw-600"
@@ -26,31 +25,21 @@
         >
       </div>
 
-      <!-- Hamburger dropdown (only on small screens) -->
+      <!-- Mobile hamburger -->
       <div class="dropdown d-md-none ms-2">
         <button
-          class="btn btn-outline-dark dropdown-toggle"
+          class="btn nav-hamburger-btn"
           type="button"
           id="navDropdown"
-          data-bs-toggle="dropdown"
           aria-expanded="false"
+          aria-label="Toggle navigation"
         >
-          <i class="bi bi-list"></i>
+          ☰
         </button>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
-          aria-labelledby="navDropdown"
-          style="right: -0.5rem"
-        >
-          <li>
-            <a class="dropdown-item" href="../../../index.html">HOME</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="../../templates/yoga.html">YOGA</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="../../templates/about.html">ABOUT</a>
-          </li>
+        <ul class="dropdown-menu dropdown-menu-end mobile-nav-menu" aria-labelledby="navDropdown">
+          <li><a class="dropdown-item" href="../../../index.html">HOME</a></li>
+          <li><a class="dropdown-item" href="../../templates/yoga.html">CLASSES</a></li>
+          <li><a class="dropdown-item" href="../../templates/about.html">ABOUT</a></li>
         </ul>
       </div>
     </div>
