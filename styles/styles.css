@@ -38,5 +38,16 @@ body {
 	flex: 1 0 auto;
 }
 
+/* Mobile adjustment for heading */
+@media (max-width: 576px) {
+      .home-hero-title {
+        font-size: 280% !important;
+      }
+    }
 
-
+/* Mobile adjustment for higher top margin */
+@media (max-width: 576px) {
+  .contact-cta-wrap {
+    margin-top: 0.75rem !important; /* lower than paragraph on mobile */
+  }
+}

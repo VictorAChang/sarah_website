@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sarah's About Page</title>
+    <title>Sarah Chang | About Me</title>
     <!-- base_site.html - shared head resources -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,58 +39,7 @@
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body class="bg-white-page">
-    <nav class="navbar py-4" style="background-color: #fafafa; min-height: 100px">
-      <div class="container-fluid">
-        <!-- Right section -->
-        <div class="d-flex align-items-center ms-auto">
-          <!-- Links visible on medium+ screens -->
-          <div class="d-none d-md-flex align-items-center">
-            <a class="nav-link px-2 text-dark" href="/templates/author.html"
-              >AUTHOR</a
-            >
-            <span class="text-muted px-1">|</span>
-            <a class="nav-link px-2 text-dark" href="/templates/yoga.html">YOGI</a>
-            <span class="text-muted px-1">|</span>
-            <a class="nav-link px-2 text-dark" href="/templates/photography.html"
-              >PHOTOGRAPHY</a
-            >
-            <span class="text-muted px-1">|</span>
-            <a class="nav-link px-2 text-dark" href="/templates/about.html"
-              >ABOUT</a
-            >
-          </div>
-
-          <!-- Hamburger dropdown (only on small screens) -->
-          <div class="dropdown d-md-none ms-2">
-            <button
-              class="btn btn-outline-dark dropdown-toggle"
-              type="button"
-              id="navDropdown"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <i class="bi bi-list"></i>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="navDropdown"
-              style="right: -0.5rem"
-            >
-              <li>
-                <a class="dropdown-item" href="/templates/author.html">Author</a>
-              </li>
-              <li><a class="dropdown-item" href="/templates/yoga.html">Yogi</a></li>
-              <li>
-                <a class="dropdown-item" href="/templates/photography.html">Photography</a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="/templates/about.html">About</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
+    <div data-include="/templates/partials/_navbar.html"></div>
     <main class="site-content">
     <section class="container my-5 position-relative" style="min-height: 5px;">
       <div class="w-100 position-relative">
@@ -264,6 +213,5 @@
     </main>
     <div data-include="/templates/partials/_footer.html"></div>
   <script src="../js/navbar.js"></script>
-  <!-- No Bootstrap JS; include dropdown helper in navbar.js if needed -->
   </body>
 </html>
