@@ -1,165 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <title>Yoga & Mimosas</title>
+    <title>Yoga & mimosas</title>
     <!-- base_site.html - shared head resources -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Default meta / social (can be overridden per-page) -->
     <meta
       name="description"
-      content="Sarah Chang — author and yoga teacher. Children's books, yoga classes, and curriculum resources."
+      content="Yoga & mimosas — join us for a fun yoga session with a mimosa in hand"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sarah Chang" />
-    <meta
-      property="og:description"
-      content="Author of children's books and yoga teacher offering classes and curriculum."
-    />
-    <meta property="og:image" content="/assets/logo.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- Favicon and theme -->
-    <link rel="icon" href="/assets/logo.png" />
-    <meta name="theme-color" content="#e9b3a3" />
-
+    <meta property="og:title" content="Yoga & mimosas" />
     <!-- Bootstrap CSS (latest) -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Bootstrap Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-
     <!-- Site stylesheet (absolute path ensures same across pages) -->
     <link rel="stylesheet" href="/styles/styles.css" />
   </head>
   <body class="bg-white-page">
     <div data-include="/templates/partials/_navbar.html"></div>
     <main class="site-content">
-    <section class="container my-5 position-relative" style="min-height: 5px;">
-      <div class="w-100 position-relative">
-        <!-- centered logo -->
-        <!-- social buttons aligned to the right and vertically centered -->
-        <div
-          class="position-absolute d-flex"
-          style="right:0rem; top:50%; transform:translateY(-50%); gap:0.5rem;"
-        >
-          <a
-            href="https://www.linkedin.com/in/sarah-chang-3376161bb/"
-            target="_blank"
-            class="btn btn-outline-dark btn-sm social-btn"
-            aria-label="LinkedIn"
-          >
-            <i class="bi bi-linkedin"></i>
-          </a>
-          <a
-            href="https://www.instagram.com/bethechang_/"
-            target="_blank"
-            class="btn btn-outline-dark btn-sm social-btn"
-            aria-label="Instagram"
-          >
-            <i class="bi bi-instagram"></i>
-          </a>
+      <!-- Section 1: Header -->
+      <section class="container py-5">
+        <div class="row">
+          <div class="col-12">
+            <h1
+              class="text-left mb-0 home-hero-title"
+              style="font-size: 450%; font-weight: bold"
+            >
+              Yoga & Mimosas
+            </h1>
+          </div>
         </div>
-      </div>
-    </section>
-    <section class="container-fluid p-0" style="background-image:url('../assets/yoga/yoga_bg.png'); background-size:cover; background-position:center; background-repeat:no-repeat;">
-      <style>
-        @media (min-width: 992px) {
-          .author-illustrator-img { height: clamp(600px, 30vh, 480px) !important; }
-          .author-illustrator-wrap { max-height: none !important; }
-        }
-      </style>
-      <div class="d-flex justify-content-center align-items-center author-illustrator-wrap" style="min-height:140px; max-height:50vh; padding:0.25rem 0; overflow:hidden;">
-        <img
-          class="author-illustrator-img"
-          src="../assets/yoga/yogi_header.png"
-          alt="Author illustrator"
-          style="height:clamp(340px,22vh,320px); max-width:100%; width:auto; object-fit:contain; display:block;"
-        />
-      </div>
-    </section>
-    <section class="container my-5 text-center">
-      <h1 style="color: #000; margin-top: 3rem; margin-bottom: 2rem; text-align: center; font-size: 3rem; font-weight: normal; letter-spacing: 0.3em; word-spacing: 0.2em;">YOUR LOCAL YOGI</h1>
-      <div class="d-flex justify-content-center align-items-center" style="gap: 4rem;">
-        <img src="../assets/yoga/yoga1.png" alt="Image 1" class="img-fluid yoga-image" style="max-width: 300px;">
-        <img src="../assets/yoga/yoga2.png" alt="Image 2" class="img-fluid yoga-image" style="max-width: 300px;">
-      </div>
-      
-      <style>
-        @media (max-width: 768px) {
-          .yoga-image {
-            max-width: 170px !important;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .yoga-image {
-            max-width: 160px !important;
-          }
-        }
-      </style>
-    </section>
-    </section>
-    <section class="container my-5">
-      <div
-      class="position-relative d-flex flex-column align-items-center"
-      style="z-index: 2"
-      >
-      <h1 style="color: #000; margin-top: 3rem; margin-bottom: -1rem; text-align: center; font-size: 3rem; font-weight: normal;">BIO</h1>
-      <div class="row align-items-center justify-content-between">
-        <div class="col-12 col-md-8 pe-md-6 mx-auto text-center text-md-start" style="margin: 0;">
-        <div class="p-3 pe-0">
-          <h3 style="font-size: 1rem; margin-bottom: 1.5rem;">RYT-200, Yoga Alliance</h3>
-          <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
-          I began my yoga practice in a time where I needed both physical and mental healing. In part of seeking more holistic practices and healthy habits, yoga became foundational for my well-being. As a former English teacher, I fell naturally into teaching others and interlacing themes told through movement and meditation. 
+      </section>
+      <!-- Section 2: Left image + paragraphs + logo -->
+      <section class="container py-4">
+        <div class="row g-5 align-items-start d-none d-lg-flex">
+          <!-- Desktop layout -->
+          <div class="col-12 col-lg-6">
+            <img
+              src="../assets/mimosas/Yoga & Mimosas (2).png"
+              alt="Yoga & Mimosas"
+              class="img-fluid rounded w-100"
+              style="margin-top: -11rem"
+            />
+          </div>
+          <div class="col-12 col-lg-6">
+            <p style="font-size: 162%; font-weight: bold; margin-top: 2rem">
+              When?
+            </p>
+            <p style="font-size: 162%; margin-top: -1rem">
+              Every Wednesday at 10am
+            </p>
+            <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+              Where?
+            </p>
+            <p style="font-size: 162%; margin-top: -1rem">
+              Madison's on Main (front dining room) in Downtown Flushing
+            </p>
+            <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+              Cost?
+            </p>
+            <p style="font-size: 162%; margin-top: -1rem">$20</p>
+            <div class="d-flex justify-content-center">
+              <img
+                src="../assets/mimosas/Madisons on Main Logo.png"
+                alt="Madison's on Main Logo"
+                class="img-fluid rounded"
+                style="max-width: 260px; margin-top: -9rem"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Mobile layout: logo first, then paragraphs, then image -->
+        <div class="d-lg-none">
+          <div class="d-flex justify-content-center mb-4">
+            <img
+              src="../assets/mimosas/Madisons on Main Logo.png"
+              alt="Madison's on Main Logo"
+              class="img-fluid rounded"
+              style="max-width: 260px; margin-top: -7rem"
+            />
+          </div>
+          <p style="font-size: 162%; font-weight: bold; margin-top: -7rem">
+            When?
           </p>
-          <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
-          I attained my RYT-200 through Higher Power Healing, developing a foundation in Hatha teaching practices. I began teaching at Triangle Rock Club, focusing greatly on providing a guided practice to meet the needs of a diverse community including rock climbers, veterans, and first-time yogis. My goal is to make yoga both accessible and meaningful: meeting students where they are, and guiding them toward where they want to go.
+          <p style="font-size: 162%; margin-top: -1rem">
+            Every Wednesday at 10am
           </p>
+          <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+            Where?
+          </p>
+          <p style="font-size: 162%; margin-top: -1rem">
+            Madison's on Main (front dining room) in Downtown Flushing
+          </p>
+          <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+            Cost?
+          </p>
+          <p style="font-size: 162%; margin-top: -1rem" class="mb-4">$20</p>
+          <img
+            src="../assets/mimosas/Yoga & Mimosas (2).png"
+            alt="Yoga & Mimosas"
+            class="img-fluid rounded w-100"
+            style="margin-top: -7rem"
+          />
         </div>
+      </section>
+      <!-- Section 3: 5 paragraphs -->
+      <section class="container py-5">
+        <div class="row g-5 align-items-start">
+          <div class="col-12">
+            <p style="font-size: 162%; margin-top: -12rem">
+              This playful yoga class is all about letting go, having fun, and
+              not taking yourself too seriously. Set in a relaxed, welcoming
+              atmosphere, we'll move through a lighthearted flow that weaves in
+              mimosas. And yes, you might find yourself balancing with a glass
+              in hand or toasting in a pose or two.
+            </p>
+            <p style="font-size: 162%">
+              Expect laughter, connection, and feel-good movement designed for
+              every level. Whether you're coming with friends or showing up
+              solo, this class is your chance to unwind, try something new, and
+              enjoy yoga in a completely approachable way.
+            </p>
+            <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+              What to expect when you arrive?
+            </p>
+            <p style="font-size: 162%">
+              Pay online anytime before the class on
+              <a
+                href="https://www.opentable.com/r/madisons-on-main-flushing"
+                style="
+                  text-decoration: underline;
+                  color: inherit;
+                  transition: color 0.2s ease;
+                "
+                class="mimosa-link"
+                onmouseover="this.style.color = '#FFC4C7'"
+                onmouseout="this.style.color = 'inherit'"
+                onmousedown="this.style.color = '#FFC4C7'"
+                >OpenTable</a
+              >.
+            </p>
+            <p style="font-size: 162%; margin-top: 2rem">
+              Enter through the front doors on East Main Street and roll out
+              your yoga mat on the dining room floor. Your mimosa (included in
+              the cost) will be served before class begins and used as a prop
+              throughout the one-hour class.
+            </p>
+            <p style="font-size: 162%; margin-top: 2rem" class="mb-0">
+              As a courtesy, please arrive on time.
+            </p>
+            <p style="font-size: 162%; margin-top: 2rem" class="mb-0">
+              Stay after for some delicious food and get 10% off your meal!
+            </p>
+          </div>
         </div>
-        <div class="col-md-4 d-flex justify-content-center justify-content-md-end align-items-center text-center" style="padding-left:0rem;">
-        <img src="../assets/yoga/yoga3.png" alt="Henry Goes to the Zoo con su Abuelo book cover" class="img-fluid mx-auto" style="max-width: 300px; margin-top: 1rem;">
-        </div>
-      </div>
-      </div>
-      <h1 style="color: #000; margin-top: 3rem; margin-bottom: 0rem; text-align: center; font-size: 3rem; font-weight: normal;">CLASS OFFERINGS</h1>
-      <div class="row align-items-center justify-content-between">
-      <div class="col-12 col-md-10 pe-0 text-center text-md-start" style="margin: 0;">
-        <div class="p-3 pe-3">
-      <h3 style="font-size: 1rem; margin-bottom: 1.5rem;">Vinaya Yoga</h3>
-        <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
-        Flow through a dynamic sequence of poses that connect breath with movement, creating a mindful and energizing experience. This class engages the entire body through intentional breathwork, fluid transitions, and moments of stillness. Whether you're a beginner or seasoned yogi, you'll leave feeling centered, strong, and refreshed.
-        </p>
-      <h3 style="font-size: 1rem; margin-bottom: 1.5rem;">Partner Yoga</h3>
-        <p style="z-index: 2; color: #000; margin: 0 0 1rem 0;">
-        Perfect for special occasions like bridal parties, birthdays, or girls' nights, this playful class invites you to connect through fun, supportive partner poses. Laugh, stretch, and bond with your besties while moving to a feel-good playlist in a relaxed, lighthearted setting. No yoga experience needed; just bring your crew and a sense of adventure!
-        </p>
-        </div>
-      </div>
-      </div>
-    </div>
-    </section>
-    <section class="container my-5">
-      <div class="mx-auto d-flex justify-content-center" style="max-width: 400px;">
-        <a
-          href="mailto:changsarah231@gmail.com?subject=Author%20Question&body=Hi%20Sarah%2C%20I%20wanted%20to%20connect..."
-          class="btn btn-primary"
-          style="background-color: #445e3c; border: none; border-radius: 999px; font-weight: 700; font-size: 1.125rem; padding: 0.6rem 1rem;"
-        >
-          CONTACT SARAH
-        </a>
-      </div>
-      </div>
-    </section>
+      </section>
     </main>
+    <!-- ...existing code... -->
     <div data-include="/templates/partials/_footer.html"></div>
-  <script src="../js/navbar.js"></script>
+    <script src="../js/navbar.js"></script>
   </body>
 </html>
