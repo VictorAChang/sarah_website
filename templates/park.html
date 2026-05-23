@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Yoga in the Park</title>
+    <!-- base_site.html - shared head resources -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Default meta / social (can be overridden per-page) -->
+    <meta
+      name="description"
+      content="Yoga in the Park — join us for a fun yoga session in the great outdoors"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yoga in the Park" />
+    <!-- Bootstrap CSS (latest) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Site stylesheet (absolute path ensures same across pages) -->
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
+  <body class="bg-white-page">
+    <div data-include="/templates/partials/_navbar.html"></div>
+    <main class="site-content">
+      <!-- Section 1: Header -->
+      <section class="container py-5">
+        <div class="row">
+          <div class="col-12">
+            <h1
+              class="text-left mb-5 home-hero-title"
+              style="font-size: 450%; font-weight: bold"
+            >
+              Yoga in the Park
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- Section 2: Left image + paragraphs + logo -->
+      <section class="container py-4">
+        <div class="row g-5 align-items-start d-none d-lg-flex">
+          <!-- Desktop layout -->
+          <div class="col-12 col-lg-6">
+            <img
+              src="../assets/park/Sarah Heart.png"
+              alt="Yoga in the Park"
+              class="img-fluid rounded w-100"
+              style="margin-top: -11rem"
+            />
+          </div>
+          <div class="col-12 col-lg-6">
+            <p style="font-size: 162%; font-weight: bold; margin-top: 2rem">
+              When?
+            </p>
+            <p style="font-size: 162%; margin-top: -1rem">
+              Saturday at 12:00 PM
+            </p>
+            <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+              Where?
+            </p>
+            <p style="font-size: 162%; margin-top: -1rem">Riverview Park</p>
+            <p style="font-size: 162%; margin-top: -1rem">Flushing, MI</p>
+            <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+              Cost?
+            </p>
+            <p style="font-size: 162%; margin-top: -1rem">FREE</p>
+          </div>
+        </div>
+        <!-- Mobile layout: logo first, then paragraphs, then image -->
+        <div class="d-lg-none">
+          <div class="d-flex justify-content-center mb-4"></div>
+          <p style="font-size: 162%; font-weight: bold; margin-top: -7rem">
+            When?
+          </p>
+          <p style="font-size: 162%; margin-top: -1rem">Saturday at 12:00 PM</p>
+          <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+            Where?
+          </p>
+          <p style="font-size: 162%; margin-top: -1rem">Riverview Park</p>
+          <p style="font-size: 162%; margin-top: -1rem">Flushing, MI</p>
+          <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+            Cost?
+          </p>
+          <p style="font-size: 162%; margin-top: -1rem" class="mb-4">FREE</p>
+          <img
+            src="../assets/park/Sarah Heart.png"
+            alt="Yoga in the Park"
+            class="img-fluid rounded w-100"
+            style="margin-top: -3rem"
+          />
+        </div>
+      </section>
+      <!-- Section 3: 5 paragraphs -->
+      <section class="container py-5">
+        <div class="row g-5 align-items-start">
+          <div class="col-12">
+            <p style="font-size: 162%; margin-top: -8rem">
+              Join me for a free outdoor yoga class that is open to everyone,
+              whether you are brand new to yoga or have been practicing for
+              years. This class will include mindful movement, fun poses, and
+              longer holds to help you build strength, balance, flexibility, and
+              body awareness while enjoying time outside with your community.
+            </p>
+            <p style="font-size: 162%">
+              My goal is to create a welcoming space where you can move,
+              breathe, laugh, and simply enjoy the practice at your own pace.
+              Bring your yoga mat, some water, and a friend! I look forward to
+              practicing with you!
+            </p>
+            <p style="font-size: 162%; font-weight: bold; margin-top: 3rem">
+              Dates
+            </p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">May 30</p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">
+              June 27
+            </p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">
+              July 11
+            </p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">
+              June 25
+            </p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">
+              August 8
+            </p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">
+              September 19
+            </p>
+            <p style="font-size: 162%; margin-top: 0rem" class="mb-0">
+              October 3
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ...existing code... -->
+    <div data-include="/templates/partials/_footer.html"></div>
+    <script src="../js/navbar.js"></script>
+  </body>
+</html>

@@ -1,4 +1,42 @@
 <nav class="navbar py-4" style="background-color: #ffffff; min-height: 120px">
+  <style>
+    .navbar .about-hover-group {
+      position: relative;
+    }
+
+    .navbar .about-hover-group:hover .books-submenu {
+      display: block;
+    }
+
+    .navbar .books-submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 200px;
+      background: #ffffff;
+      border: 1px solid #ddd;
+      box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.08);
+      z-index: 1000;
+      padding: 0.25rem 0;
+    }
+    .navbar .about-hover-group:hover .books-submenu,
+    .navbar .about-hover-group .books-submenu:hover {
+      display: block;
+    }
+
+    .navbar .books-submenu .dropdown-item {
+      color: #222;
+      padding: 0.65rem 1rem;
+      white-space: nowrap;
+    }
+
+    .navbar .books-submenu .dropdown-item:hover,
+    .navbar .books-submenu .dropdown-item:focus {
+      background-color: #f8f9fa;
+      color: #000;
+    }
+  </style>
   <div class="container-fluid">
     <div class="d-flex align-items-center ms-auto">
       <!-- Desktop links -->
@@ -17,12 +55,17 @@
           >CLASSES</a
         >
         <span class="text-muted px-1">|</span>
-        <a
-          class="nav-link px-4 text-dark fw-600"
-          href="../../templates/about.html"
-          style="font-size: 1.3rem"
-          >ABOUT</a
-        >
+        <div class="about-hover-group">
+          <a
+            class="nav-link px-4 text-dark fw-600"
+            href="../../templates/about.html"
+            style="font-size: 1.3rem"
+            >ABOUT</a
+          >
+          <div class="books-submenu">
+            <a class="dropdown-item" href="../../templates/books.html">BOOKS</a>
+          </div>
+        </div>
       </div>
 
       <!-- Mobile hamburger -->
@@ -36,10 +79,22 @@
         >
           ☰
         </button>
-        <ul class="dropdown-menu dropdown-menu-end mobile-nav-menu" aria-labelledby="navDropdown">
+        <ul
+          class="dropdown-menu dropdown-menu-end mobile-nav-menu"
+          aria-labelledby="navDropdown"
+        >
           <li><a class="dropdown-item" href="../../../index.html">HOME</a></li>
-          <li><a class="dropdown-item" href="../../templates/yoga.html">CLASSES</a></li>
-          <li><a class="dropdown-item" href="../../templates/about.html">ABOUT</a></li>
+          <li>
+            <a class="dropdown-item" href="../../templates/yoga.html"
+              >CLASSES</a
+            >
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../templates/about.html">ABOUT</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="../../templates/books.html">BOOKS</a>
+          </li>
         </ul>
       </div>
     </div>
